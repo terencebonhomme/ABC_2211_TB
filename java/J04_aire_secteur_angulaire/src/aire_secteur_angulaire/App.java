@@ -20,8 +20,6 @@ public class App {
 		
 		aire = Math.PI * Math.pow(rayon, 2) * angle / 360;
 		System.out.println("L'aire du secteur angulaire est " + aire);
-		System.out.println("a");
-		System.out.print("a");
 		
 		sc.close();
 		
