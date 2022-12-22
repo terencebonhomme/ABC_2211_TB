@@ -78,7 +78,7 @@
 
     entier a 
     entier b 
-    entier c 
+    entier temp 
 
     écrire “Veuillez saisir la valeur de a” 
     lire a 
@@ -89,9 +89,9 @@
     écrire  “La valeur de a est “, a 
     écrire  “La valeur de b est “, b 
 
-    c <-- b 
+    temp <-- b 
     b <-- a 
-    a <-- c 
+    a <-- temp
 
     écrire  “La valeur de a est “, a 
     écrire  “La valeur de b est “, b 
@@ -110,7 +110,7 @@
 
     sinon 
 
-        si a <= 18 alors 
+        si a < 18 alors 
             écrire “Vous êtes mineur” 
         sinon 
             écrire “Vous êtes majeur” 
