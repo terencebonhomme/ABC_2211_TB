@@ -122,7 +122,12 @@
 ### Exercice 2.2 
 
     entier a 
-    entier b 
+    entier b
+
+    écrire "Saisir A"
+    lire a
+    écrire "Saisir B"
+    lire b 
 
     si a < b alors 
         écrire a, “, “, b 
