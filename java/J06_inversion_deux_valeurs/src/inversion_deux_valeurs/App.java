@@ -14,6 +14,11 @@ public class App {
 		Scanner sc = new Scanner(System.in);
 		
 		// DEBUT PROGRAMME
+					
+		System.out.println("Ecrire A");
+		a = sc.nextInt();
+		System.out.println("Ecrire B");
+		b = sc.nextInt();
 		
 		temp = a;
 		a = b;
