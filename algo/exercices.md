@@ -30,10 +30,10 @@
     écrire “Veuillez saisir le rayon de la sphère” 
     lire rayon 
 
-    aire <-- 4 * PI * (rayon * rayon) 
+    aire <-- 4 * PI * rayon^2
     écrire “L’aire de la sphère est “, aire
 
-    volume <-- (4/3) * PI * (rayon * rayon * rayon) 
+    volume <-- (4/3) * PI * rayon^3
     écrire “Le volume de la sphère est “, volume 
 
 ### Exercice 1.3 
