@@ -48,7 +48,7 @@
     écrire “Veuillez saisir l’angle du cercle” 
     lire angle 
 
-    aire <-- (PI * rayon * rayon * angle) / 360 
+    aire <-- (PI * rayon^2 * angle) / 360 
     écrire “L’aire du cercle est “, aire 
 
 ### Exercice 1.4 
@@ -69,10 +69,10 @@
     écrire “Veuillez saisir l’intérêt offert par la banque” 
     lire interet 
 
-    tant que compteur <= annee 
-        somme <-- somme + interet 
-        compteur <-- compteur + 1 
-    fin tant que 
+    sommeIntSimple = somme * (1 + annee * interet/100)
+    sommeIntCompose = somme * (1 + interet/100)^annee
+
+    écrire "La somme avec un intérêt simple est", sommeIntSimple, " et la somme avec un intérêt composé est ", sommeIntCompose
 
 ### Exercice 1.5 
 
