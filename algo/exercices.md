@@ -144,18 +144,30 @@
 
     si a < b alors 
 
-        si b < c alors 
-            écrire a, “, “, b, “, “, c 
+        si a < c alors 
+
+            si c < b alors
+                écrire a, “, “, c, “, “, b 
+            sinon
+                écrire a, “, “, b, “, “, c 
+            fin si
+
         sinon 
-            écrire a, “, “, c, “, “, b 
+            écrire c, “, “, a, “, “, b
         fin si
 
     sinon 
 
         si a < c alors 
             écrire b, “, “, a, “, “, c 
-        sinon 
-            écrire b, “, ”, c, “, ”, a
+        sinon
+
+            si c < b alors
+                écrire c, “, ”, b, “, ”, a
+            sinon
+                écrire b, “, ”, c, “, ”, a
+            fin si             
+            
         fin si	
 
     fin si 
