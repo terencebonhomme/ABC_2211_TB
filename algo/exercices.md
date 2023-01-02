@@ -311,6 +311,38 @@
 
     écrire magasin 
 
+### Exercice 3.3
+
+    tableau entier t
+    entier n
+    entier i
+    booléen figure
+
+    i <-- 0
+    figure <-- faux
+
+    lire n
+
+    tant que 
+
+        si i < |t| alors
+
+            si t[i] = n alors                
+                figure = vrai
+                i <-- |t|
+            sinon si t|i] > n alors
+                figure = faux                        
+                i <-- |t|
+            sinon
+                i <-- i + 1    
+            fin si
+            
+        fin si        
+
+    fin tant que 
+
+    écrire figure
+
  
 
  
