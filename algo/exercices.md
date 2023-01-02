@@ -235,48 +235,25 @@
 
     réel distance_km 
     réel distance_miles 
+    chaîne reponse
 
-    distance_miles <-- 0 
+    reponse <-- ""
 
-    lire distance_km 
+    tant que reponse != q
 
-    tant que distance_miles = 0 
+        écrire "Saisir une distance entre 0.01 et 1000000"
+        lire distance_km
 
-        si distance_km = “q” alors 
+        si(distance_km >= 0.01 et distance_km <= 1000000 alors
+            écrire distance_km / 1.609
+        sinon
+            écrire "La valeur doit être comprise entre 0.01 et 1000000"
+        fin si
 
-            distance_miles <-- -1 
+        écrire q pour quitter, autre pour continue
+        lire reponse
 
-            écrire “quitter” 
-
-        sinon 
-
-            si distance_km >= 0.01 alors 
-
-                si distance_km <= 1000000 alors  
-
-                    distance_miles <-- distance / 1.609 
-
-                    écrire distance_miles 
-
-                sinon 
-
-                    écrire “la valeur doit être comprise entre 0.01 et 1000000, saisir une nouvelle valeur” 
-
-                    lire distance_km	 
-
-                fin si 
-
-            sinon 
-
-                écrire “la valeur doit être comprise entre 0.01 et 1000000, saisir une nouvelle valeur” 
-
-                lire distance_km 
-
-            fin si 
-
-        fin si 
-
-    fin tant que 
+    fin tant que
 
 ## Partie 3
 
