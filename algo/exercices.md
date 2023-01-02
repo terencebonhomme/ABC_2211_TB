@@ -278,7 +278,9 @@
 
     fin tant que 
 
-Exercice 3.1 
+## Partie 3
+
+### Exercice 3.1 
 
     entier N 
     entier essai 
@@ -309,7 +311,7 @@ Exercice 3.1
 
     écrire “Bravo vous avez trouvé en ”, essai ,” essais” 
 
-Exercice 3.2 
+### Exercice 3.2 
 
     entier S 
     entier magasin 
