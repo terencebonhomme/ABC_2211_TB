@@ -96,6 +96,8 @@
     écrire  “La valeur de a est “, a 
     écrire  “La valeur de b est “, b 
 
+    ![](exercice%201.5.jpg)
+
 ## Partie 2 
 
 ## Exercice 2.1 
