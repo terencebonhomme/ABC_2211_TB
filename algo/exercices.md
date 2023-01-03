@@ -96,7 +96,7 @@
     écrire  “La valeur de a est “, a 
     écrire  “La valeur de b est “, b 
 
-![](exercice%201.5.jpg](https://github.com/terencebonhomme/ABC_2211_TB/blob/main/algo/exercice%201.5.jpg)
+![](https://github.com/terencebonhomme/ABC_2211_TB/blob/main/algo/exercice%201.5.jpg)
 
 ## Partie 2 
 
