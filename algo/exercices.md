@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Algorithmes Exercices #1 
 
 ## Partie 1 
@@ -345,41 +343,8 @@
 
     fin tant que 
 
-    écrire figure
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
->>>>>>> cbb3f7d4c707b65f2f76be5b0d18d2c0dd2e8e88
+    si figure = vrai alors
+        écrire figure
+    sinon
+        écrire "404 Not found"
+    fin si
