@@ -352,3 +352,39 @@
     sinon
         écrire "404 Not found"
     fin si
+
+### Exercice 3.4
+
+    chaîne chaine
+    caractère lettre
+    entier nombre_occurrence
+
+    nombre_occurrence <- 0
+
+    si |chaine| = 0 ou |chaine| = 1 et chaine[0] = . alors
+        
+        écrire "LA CHAINE EST VIDE"
+
+    sinon
+
+        convertir chaine en tableau de caractères
+
+        tant que chaine[i] != .
+
+            sinon si chaine[i] = lettre alors
+                nombre_occurrence <- nombre_occurrence + 1
+            fin si
+
+        fin tant que
+
+        écrire nombre_occurrence
+
+    fin si
+
+#### tests
+
+    chaine = ""
+    chaine = "."
+    chaine = "BCD."
+    chaine = "ABC."
+    chaine = "ABACD."
