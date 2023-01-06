@@ -217,21 +217,28 @@
 ### Exercice 2.6 
 
     entier n 
-    entier est_premier 
+    entier i
+    booléen est_premier 
 
     lire n 
 
-    est_premier <-- 0 
+    est_premier <-- vrai
 
-    pour i = n – 1 à 2 
+    pour i = 2 à n - 1
 
-        si n % i = 0 alors 
-            écrire “i” 
+        si n mod i = 0 alors 
+            est_premier <-- faux
         fin si 
 
-        i <-- i - 1 
+        i <-- i + 1 
 
     fin pour 
+
+    si est_premier alors
+        écrire "n est un nombre premier"
+    sinon
+        écrire "n n'est pas un nombre premier"
+    fin si
 
 ### Exercice 2.7 
 
