@@ -339,23 +339,16 @@
             si t[i] = n alors                
                 figure = vrai
                 i <-- |t|
-            sinon si t|i] > n alors
-                figure = faux                        
-                i <-- |t|
-            sinon
-                i <-- i + 1    
             fin si
             
         fin si        
 
+        i <-- i + 1    
+
     fin tant que 
 
-<<<<<<< HEAD
     si figure = vrai alors
         écrire figure
     sinon
         écrire "404 Not found"
     fin si
-=======
-    écrire figure
->>>>>>> ae64b0eb4054daad5e2a82f065f0ec31e1764f15
