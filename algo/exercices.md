@@ -96,7 +96,7 @@
     écrire  “La valeur de a est “, a 
     écrire  “La valeur de b est “, b 
 
-    ![](exercice%201.5.jpg)
+![](https://github.com/terencebonhomme/ABC_2211_TB/blob/main/algo/exercice%201.5.jpg)
 
 ## Partie 2 
 
@@ -350,8 +350,12 @@
 
     fin tant que 
 
+<<<<<<< HEAD
     si figure = vrai alors
         écrire figure
     sinon
         écrire "404 Not found"
     fin si
+=======
+    écrire figure
+>>>>>>> ae64b0eb4054daad5e2a82f065f0ec31e1764f15
