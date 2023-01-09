@@ -96,7 +96,7 @@
     écrire  “La valeur de a est “, a 
     écrire  “La valeur de b est “, b 
 
-![](https://github.com/terencebonhomme/ABC_2211_TB/blob/main/algo/exercice%201.5.jpg)
+[![](https://mermaid.ink/img/pako:eNplkcFqwzAMhl_F6NIVGnoP7BDTyw67bL0lOyixkoolTpBtyih9oD5HX2zOMmg2-2DMr88_v6QLNKMhyKHtx3NzQvHqeKisiqemjq1l2z2Z-60OfrvIWZaps7CnFzsFX5T7-60RFlIbh-xYVLHZfzxQITQR6meiWBceHjr10ImH_vXQ6wI6x5090jCVPl7qWWFSLUqMep3ouqyjPn_7H-qNXOjXnaW5F2QV_E8ssmYeW8t2CzsYSAZkE2d8mZEK_IkGqiCPT4PyWUFlr5HD4Mf3L9tA7iXQDsJk0NOBsRMcIG-xd1Elw36U12VpP7u7fgMTtpFt?type=png)](https://mermaid.live/edit#pako:eNplkcFqwzAMhl_F6NIVGnoP7BDTyw67bL0lOyixkoolTpBtyih9oD5HX2zOMmg2-2DMr88_v6QLNKMhyKHtx3NzQvHqeKisiqemjq1l2z2Z-60OfrvIWZaps7CnFzsFX5T7-60RFlIbh-xYVLHZfzxQITQR6meiWBceHjr10ImH_vXQ6wI6x5090jCVPl7qWWFSLUqMep3ouqyjPn_7H-qNXOjXnaW5F2QV_E8ssmYeW8t2CzsYSAZkE2d8mZEK_IkGqiCPT4PyWUFlr5HD4Mf3L9tA7iXQDsJk0NOBsRMcIG-xd1Elw36U12VpP7u7fgMTtpFt)
 
 ## Partie 2 
 
@@ -355,23 +355,36 @@
 
 ### Exercice 3.4
 
+    // VARIABLES
+
     chaîne chaine
+    tableau de caractères chaine_caractere
     caractère lettre
     entier nombre_occurrence
+    entier i
 
+    i <- 0
     nombre_occurrence <- 0
+
+    // DEBUT PROGRAMME
+
+    écrire "saisir une chaine qui se termine par un point"
+    lire chaine
+
+    écrire "saisir une lettre"
+    lire lettre
+
+    convertir chaine en tableau de caractères
 
     si |chaine| = 0 ou |chaine| = 1 et chaine[0] = . alors
         
         écrire "LA CHAINE EST VIDE"
 
-    sinon
-
-        convertir chaine en tableau de caractères
+    sinon       
 
         tant que chaine[i] != .
 
-            sinon si chaine[i] = lettre alors
+            si chaine[i] = lettre alors
                 nombre_occurrence <- nombre_occurrence + 1
             fin si
 
@@ -380,6 +393,8 @@
         écrire nombre_occurrence
 
     fin si
+
+    // FIN PROGRAMME
 
 #### tests
 
