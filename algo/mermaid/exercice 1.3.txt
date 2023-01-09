@@ -1,0 +1,9 @@
+flowchart TD
+    beginning(début)
+    --- writeRadius[/écrire 'Veuillez saisir le rayon du cercle'/]
+    --- readRadius[/lire rayon/]
+    --- writeAngle[/écrire 'Veuillez saisir l'angle du cercle'/]
+    --- readAngle[/lire angle/]
+    --- calculateArea["aire = (PI * rayon^2 * angle) / 360"]
+    --- writeArea[/écrire 'L'aire du cercle est, aire'/]
+    --- ending(fin)
