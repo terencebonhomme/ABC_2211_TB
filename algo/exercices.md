@@ -332,32 +332,28 @@
 ### Exercice 3.3
 
     tableau entier t
-    entier n
+    entier nombre
     entier i
-    booléen figure
+    entier indice
+    booléen yFigure
 
-    i <-- 0
-    figure <-- faux
+    yFigure <-- faux
 
-    lire n
+    lire nombre
 
-    tant que 
+    pour i de 0 à |t| - 1
 
-        si i < |t| alors
-
-            si t[i] = n alors                
-                figure = vrai
-                i <-- |t|
+        si yFigure = faux alors
+            si t[i] = nombre alors                
+                yFigure = vrai
+                indice = i - 1
             fin si
-            
         fin si        
 
-        i <-- i + 1    
+    fin pour
 
-    fin tant que 
-
-    si figure = vrai alors
-        écrire figure
+    si yFigure = vrai alors
+        écrire indice
     sinon
         écrire "404 Not found"
     fin si
