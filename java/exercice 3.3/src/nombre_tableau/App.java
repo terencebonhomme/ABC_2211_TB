@@ -25,7 +25,7 @@ public class App {
 		}
 		
 		if(yFigure) {
-			System.out.println(indice);
+			System.out.println(--indice);
 		}else {
 			System.out.println("404 Not found");
 		}
