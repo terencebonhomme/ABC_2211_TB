@@ -21,12 +21,7 @@ public class App {
 		s = sc.nextInt();
 		
 		while(s > 0) {
-			
-			if(s == 1) {
-			} else {
-				s = s - (s/2 + 1);
-			}
-			
+			s = s - (s/2 + 1);	
 			magasin++;
 		}
 		
