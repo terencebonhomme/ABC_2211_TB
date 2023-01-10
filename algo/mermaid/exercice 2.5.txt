@@ -1,0 +1,14 @@
+flowchart TD
+    ending(fin)
+
+    beginning(début)
+    --- assignI[i = 2]
+    --- readN[/lire n/]
+    --- ifFor{i < n}
+    ifFor -- oui --> ifModI{n mod i = 0} 
+        -- oui --> 
+            writeResult[/écrire 'i, est un diviseur de, n'/] 
+            --> incrementI[i = i + 1] --> ifFor
+        -- non --> ending
+        ifModI -- non --> incrementI --> ifFor
+
