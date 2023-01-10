@@ -1,5 +1,6 @@
 package jeu_fourchette;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class App {
@@ -11,6 +12,10 @@ public class App {
 		int n;
 		int essai;
 		int choix;
+		int minRandom = 0;
+		int maxRandom = 100;
+		int minFourchette = 0;
+		int maxFourchette = 100;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -18,20 +23,20 @@ public class App {
 		
 		// DEBUT PROGRAMME
 		
-		n = (int) (Math.random() * 100);
-		System.out.println(n);	
+		Random rand = new Random();
+		n = rand.nextInt(maxRandom - minRandom + 1) + minRandom;	
 		
 		do {
-			System.out.println("deviner le nombre mystere");
+			System.out.println("deviner le nombre mystere entre " + minRandom + " et " + maxRandom);
 			choix = sc.nextInt();
 			
 			essai++;
 			
 			if(choix != n) {
 				if(choix < n) {
-					System.out.println("plus grand");
+					minRandom = choix;
 				} else {
-					System.out.println("plus petit");
+					maxRandom = choix;
 				}
 			}			
 		}while(n != choix);
