@@ -39,7 +39,7 @@ public class App {
 				i++;
 			}
 			
-			System.out.println(lettre + " A " + occurrence + " occurence(s)");
+			System.out.println(lettre + " A " + occurrence + " OCCURENCE(S)");
 		}
 										
 		// FIN PROGRAMME		
