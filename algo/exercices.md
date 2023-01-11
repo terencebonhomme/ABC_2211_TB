@@ -453,6 +453,7 @@
 
     chaîne texte
     booléen palindrome
+    entier moitié
 
     palindrome = vrai
 
@@ -480,7 +481,6 @@
         sinon
             écrire 'CE TEXTE N'EST PAS UN PALINDROME'
         fin si
-
     fin si
 
 #### tests
