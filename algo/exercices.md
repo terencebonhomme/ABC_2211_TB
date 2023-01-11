@@ -448,3 +448,51 @@
 
         écrire alphabet[indice_alphabet], " a ", compteur_alphabet[indice_alphabet], " occurences"
     fin pour
+
+### Exercice 6.2
+
+    chaîne texte
+    booléen palindrome
+
+    palindrome = vrai
+
+    si |texte| = 0 alors
+        écrire 'LA CHAINE EST VIDE'
+    sinon si |texte| = 1 alors
+         écrire 'CHAINE D'AU MOINS 2 CARACTERES'
+    sinon
+        si |texte| % 2 = 0 alors
+            moitié = |texte| / 2 - 1
+        sinon
+            moitié = (|texte| - 1) / 2
+        fin si
+
+        pour i de 0 à moitié par pas de 1
+            pour j de |texte| - 1 à moitié par pas de -1
+                si texte[i] != texte[j] alors
+                    palindrome <-- faux
+                fin si
+            fin pour
+        fin pour
+
+        si palindrome alors
+            écrire 'CE TEXTE EST UN PALINDROME'
+        sinon
+            écrire 'CE TEXTE N'EST PAS UN PALINDROME'
+        fin si
+
+    fin si
+
+#### tests
+
+    AA
+    38783
+    LAVAL
+    LAVAL A ETE A LAVAL
+    ET LA MARINE VA VENIR A MALDE
+
+    A1A
+    382783
+    LAV3AL
+    LAVAL4 A ETE A LAVAL
+    ET LA MARINE VA VENI5R A MALDE
