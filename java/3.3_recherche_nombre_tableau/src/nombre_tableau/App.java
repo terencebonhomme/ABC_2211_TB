@@ -14,6 +14,11 @@ public class App {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		// JEU DE TESTS
+		
+		System.out.println("test 1 : 4");
+		System.out.println("test 2 : 6");
+		
 		// DEBUT PROGRAMME
 		
 		nombre = sc.nextInt();
@@ -35,6 +40,13 @@ public class App {
 		sc.close();
 		
 		// FIN PROGRAMME
+		
+		// DEBUT TESTS
+		
+		if(nombre == 4) System.out.println(indice == 1);
+		if(nombre == 6) System.out.println(indice == 3);
+		
+		// FIN TESTS
 	}
 
 }
