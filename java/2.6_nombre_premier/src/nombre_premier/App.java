@@ -29,6 +29,10 @@ public class App {
 		System.out.println("Saisir un nombre");
 		nombre = sc.nextInt();
 		
+		if(nombre == 0 || nombre == 1) {
+			premier = false;
+		}
+		
 		/*
 		 * nombre est premier jusqu'a preuve du contraire
 		 * 
