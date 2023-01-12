@@ -13,6 +13,14 @@ public class App {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		// JEU DE TESTS
+		
+		System.out.println("test 1 : 5 avec aucun diviseur");
+		System.out.println("test 2 : 4 avec le diviseur 2");
+		System.out.println("test 3 : 16 avec les diviseurs 2, 4, 8");
+		System.out.println("test 4 : 10 avec les diviseurs 2, 5");
+		System.out.println("");
+		
 		// DEBUT PROGRAMME
 		
 		System.out.println("Saisir un nombre");
