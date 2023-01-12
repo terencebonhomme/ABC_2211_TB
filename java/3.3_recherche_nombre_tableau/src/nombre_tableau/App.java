@@ -7,7 +7,7 @@ public class App {
 	public static void main(String[] args) {
 		// VARIABLES
 		
-		int[] tabEntier = new int[] {2, 4, 6, 8};	
+		int[] tabEntier = new int[] {2, 4, 4, 6, 8};	
 		boolean yFigure = false;
 		int nombre;
 		int indice;
@@ -24,8 +24,10 @@ public class App {
 			}
 		}
 		
+		indice--;
+		
 		if(yFigure) {
-			System.out.println(--indice);
+			System.out.println(indice);
 		}else {
 			System.out.println("404 Not found");
 		}
