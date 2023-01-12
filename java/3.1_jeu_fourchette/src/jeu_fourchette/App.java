@@ -19,24 +19,33 @@ public class App {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		essai = 0;	
+		essai = 0;		
+		
+		// JEU DE TESTS
+		
+		System.out.println("test 1 : nombre inferieur a la fourchette");
+		System.out.println("test 2 : nombre superieur a la fourchette");
+		System.out.println("test 3 : nombre egal au nombre aléatoire");
+		System.out.println("test 4 : nombre d'essais correct");
+		System.out.println("");
 		
 		// DEBUT PROGRAMME
 		
 		Random rand = new Random();
-		n = rand.nextInt(maxRandom - minRandom + 1) + minRandom;	
+		n = rand.nextInt(maxRandom - minRandom + 1) + minRandom;
+		System.out.println(n);
 		
 		do {
-			System.out.println("deviner le nombre mystere entre " + minRandom + " et " + maxRandom);
+			System.out.println("deviner le nombre mystere entre " + minFourchette + " et " + maxFourchette);
 			choix = sc.nextInt();
 			
 			essai++;
 			
 			if(choix != n) {
 				if(choix < n) {
-					minRandom = choix;
+					if(choix >= minFourchette) minFourchette = choix;
 				} else {
-					maxRandom = choix;
+					if(choix <= maxFourchette) maxFourchette = choix;
 				}
 			}			
 		}while(n != choix);
