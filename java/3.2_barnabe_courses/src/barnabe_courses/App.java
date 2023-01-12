@@ -34,7 +34,6 @@ public class App {
 		
 		while(s > 0) {
 			if(s > 2) {
-				//System.out.println(s - (s/2 + 1) == s/2 - 1);
 				System.out.println(s + " - " + (s/2 + 1) + " = " + (s - (s/2 + 1)) + " car " + (s/2 + 1) + " < " + s + " donc " + (magasin + 1) + " magasin(s)");  
 				s = s - (s/2 + 1);				
 			}else {
