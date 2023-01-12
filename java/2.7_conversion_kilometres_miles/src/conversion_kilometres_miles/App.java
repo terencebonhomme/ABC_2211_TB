@@ -13,6 +13,17 @@ public class App {
 		double distance;
 		String reponse;
 		boolean quit = false;
+		
+		// JEU DE TESTS
+		
+		System.out.println("test 1 : distance = 0 est hors intervalle");
+		System.out.println("test 2 : distance = 1 vaut environ 0,621");
+		System.out.println("test 3 : distance = 5000 vaut environ 3107,320");
+		System.out.println("test 4 : distance = 1000000 vaut environ 621504,039");
+		System.out.println("test 5 : distance = 0.01 vaut environ 0.006");
+		System.out.println("test 6 : distance = 0.009 est hors intervalle");
+		System.out.println("test 7 : distance = 1000000.1 est hors intervalle");
+		System.out.println("");
 
 		// DEBUT PROGRAMME
 
@@ -37,7 +48,6 @@ public class App {
 		sc.close();
 		
 		// FIN PROGRAMME
-
 	}
 
 }
