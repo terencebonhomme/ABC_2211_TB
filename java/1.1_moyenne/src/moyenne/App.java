@@ -37,7 +37,7 @@ public class App {
 		
 		moyenne = (nombre1 + nombre2) / 2d;
 		
-		System.out.println("La moyenne de " + nombre1 + " et " + nombre2 + " est " + moyenne);	
+		System.out.println("La moyenne de " + nombre1 + " et " + nombre2 + " est " + moyenne);	
 		
 		sc.close();
 		
