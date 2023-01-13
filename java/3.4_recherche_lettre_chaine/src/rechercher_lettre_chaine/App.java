@@ -16,6 +16,15 @@ public class App {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		// JEU DE TESTS
+		
+		System.out.println("test 1 : a avec chaine vide");
+		System.out.println("test 2 : a avec .");
+		System.out.println("test 3 : a avec Cras eget tellus et nibh porta egestas.");
+		System.out.println("test 4 : a avec Cras eget tellus et nibh porta egestas");
+		System.out.println("test 5 : z avec Cras eget tellus et nibh porta egestas.");
+		
+		
 		// DEBUT PROGRAMME
 		
 		System.out.println("saisir une chaine qui se termine par un point");
@@ -42,7 +51,17 @@ public class App {
 			System.out.println(lettre + " A " + occurrence + " OCCURENCE(S)");
 		}
 										
-		// FIN PROGRAMME		
+		// FIN PROGRAMME
+		
+		// DEBUT TESTS
+		
+		if(chaine.length() == 0 && lettre.charAt(0) == 'a') System.out.println("test 1 : " + (occurrence == 0));
+		if(chaine.length() == 1 && lettre.charAt(0) == 'a') System.out.println("test 2 : " + (occurrence == 0));
+		if(lettre.charAt(0) == 'a' && chaine.equals("Cras eget tellus et nibh porta egestas.")) System.out.println("test 3 : " + (occurrence == 3));
+		if(lettre.charAt(0) == 'a' && chaine.equals("Cras eget tellus et nibh porta egestas")) System.out.println("test 4 : " + (occurrence == 0));
+		if(lettre.charAt(0) == 'z' && chaine.equals("Cras eget tellus et nibh porta egestas.")) System.out.println("test 5 : " + (occurrence == 0));
+		
+		// FIN TESTS
 	}
 
 }
