@@ -9,7 +9,7 @@ public class App {
 		// VARIABLES
 		
 		String chaine;
-		String lettre;
+		char lettre;
 		int occurrence = 0;
 		char[] tableau_chaine;
 		int i = 0;
@@ -34,7 +34,7 @@ public class App {
 		System.out.println(tableau_chaine[1]);
 		
 		System.out.println("saisir une lettre");
-		lettre = sc.nextLine();		
+		lettre = sc.nextLine().charAt(0);						
 		
 		if(
 				tableau_chaine.length == 0 
@@ -46,7 +46,7 @@ public class App {
 			System.out.println("LA CHAINE NE FINIT PAS PAR UN POINT");
 		}else {
 			while(tableau_chaine[i] != '.') {
-				if(tableau_chaine[i] == lettre.charAt(0)) {
+				if(tableau_chaine[i] == lettre) {
 					occurrence++;
 				}
 				i++;
@@ -59,11 +59,11 @@ public class App {
 		
 		// DEBUT TESTS
 		
-		if(tableau_chaine.length == 0 && lettre.charAt(0) == 'a') System.out.println("test 1 : " + (occurrence == 0));
-		if(tableau_chaine.length == 1 && lettre.charAt(0) == 'a') System.out.println("test 2 : " + (occurrence == 0));
-		if(lettre.charAt(0) == 'a' && chaine.equals("Cras eget tellus et nibh porta egestas.")) System.out.println("test 3 : " + (occurrence == 3));
-		if(lettre.charAt(0) == 'a' && chaine.equals("Cras eget tellus et nibh porta egestas")) System.out.println("test 4 : " + (occurrence == 0));
-		if(lettre.charAt(0) == 'z' && chaine.equals("Cras eget tellus et nibh porta egestas.")) System.out.println("test 5 : " + (occurrence == 0));
+		if(tableau_chaine.length == 0 && lettre == 'a') System.out.println("test 1 : " + (occurrence == 0));
+		if(tableau_chaine.length == 1 && lettre == 'a') System.out.println("test 2 : " + (occurrence == 0));
+		if(lettre == 'a' && chaine.equals("Cras eget tellus et nibh porta egestas.")) System.out.println("test 3 : " + (occurrence == 3));
+		if(lettre == 'a' && chaine.equals("Cras eget tellus et nibh porta egestas")) System.out.println("test 4 : " + (occurrence == 0));
+		if(lettre == 'z' && chaine.equals("Cras eget tellus et nibh porta egestas.")) System.out.println("test 5 : " + (occurrence == 0));
 		
 		// FIN TESTS
 	}
