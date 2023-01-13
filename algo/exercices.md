@@ -293,14 +293,17 @@
     entier N 
     entier essai 
     entier choix 
+    entier minFourchette
+    entier maxFourchette
+
 
     essai <-- 0 
 
-    N <-- RANDOM(0,100) 
+    N <-- nombre aléatoire de 0 à 100
 
     faire 
 
-        écrire “deviner le nombre mystère” 
+        écrire "deviner le nombre mystere entre ", minFourchette," et ", maxFourchette 
         lire choix 
 
         essai <-- essai + 1 
@@ -308,9 +311,13 @@
         si choix != N alors 
 
             si choix < N alors 
-                écrire “plus petit” 
+                si choix >= minFourchette alors
+                    minFourchette <-- choix
+                fin si
             sinon 
-                écrire “plus grand” 
+                si choix <= maxFourchette alors
+                    maxFourchette <-- choix
+                fin si
             fin si 
 
         fin si 
