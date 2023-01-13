@@ -11,7 +11,7 @@ public class App {
 		String chaine;
 		String lettre;
 		int occurrence = 0;
-		char[] chaine_caractere = new char[100];
+		char[] tableau_chaine;
 		int i = 0;
 		
 		Scanner sc = new Scanner(System.in);
@@ -30,20 +30,23 @@ public class App {
 		System.out.println("saisir une chaine qui se termine par un point");
 		chaine = sc.nextLine();
 		
+		tableau_chaine = chaine.toCharArray();
+		System.out.println(tableau_chaine[1]);
+		
 		System.out.println("saisir une lettre");
 		lettre = sc.nextLine();		
 		
 		if(
-				chaine.length() == 0 
-				|| chaine.length() == 1 && chaine.charAt(0) == '.'
+				tableau_chaine.length == 0 
+				|| tableau_chaine.length == 1 && tableau_chaine[0] == '.'
 		) 
 		{
 			System.out.println("LA CHAINE EST VIDE");
-		}else if(chaine.charAt(chaine.length() - 1) != '.') {
+		}else if(tableau_chaine[tableau_chaine.length - 1] != '.') {
 			System.out.println("LA CHAINE NE FINIT PAS PAR UN POINT");
 		}else {
-			while(chaine.charAt(i) != '.') {
-				if(chaine.charAt(i) == lettre.charAt(0)) {
+			while(tableau_chaine[i] != '.') {
+				if(tableau_chaine[i] == lettre.charAt(0)) {
 					occurrence++;
 				}
 				i++;
@@ -56,8 +59,8 @@ public class App {
 		
 		// DEBUT TESTS
 		
-		if(chaine.length() == 0 && lettre.charAt(0) == 'a') System.out.println("test 1 : " + (occurrence == 0));
-		if(chaine.length() == 1 && lettre.charAt(0) == 'a') System.out.println("test 2 : " + (occurrence == 0));
+		if(tableau_chaine.length == 0 && lettre.charAt(0) == 'a') System.out.println("test 1 : " + (occurrence == 0));
+		if(tableau_chaine.length == 1 && lettre.charAt(0) == 'a') System.out.println("test 2 : " + (occurrence == 0));
 		if(lettre.charAt(0) == 'a' && chaine.equals("Cras eget tellus et nibh porta egestas.")) System.out.println("test 3 : " + (occurrence == 3));
 		if(lettre.charAt(0) == 'a' && chaine.equals("Cras eget tellus et nibh porta egestas")) System.out.println("test 4 : " + (occurrence == 0));
 		if(lettre.charAt(0) == 'z' && chaine.equals("Cras eget tellus et nibh porta egestas.")) System.out.println("test 5 : " + (occurrence == 0));
