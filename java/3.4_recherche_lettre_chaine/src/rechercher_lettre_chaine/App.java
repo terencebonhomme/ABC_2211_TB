@@ -39,7 +39,8 @@ public class App {
 		) 
 		{
 			System.out.println("LA CHAINE EST VIDE");
-			
+		}else if(chaine.charAt(chaine.length() - 1) != '.') {
+			System.out.println("LA CHAINE NE FINIT PAS PAR UN POINT");
 		}else {
 			while(chaine.charAt(i) != '.') {
 				if(chaine.charAt(i) == lettre.charAt(0)) {
