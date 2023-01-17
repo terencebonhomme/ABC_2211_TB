@@ -306,25 +306,23 @@
         écrire "deviner le nombre mystere entre ", minFourchette," et ", maxFourchette 
         lire choix 
 
-        essai <-- essai + 1 
+        essai <-- essai + 1         
 
-        
-
-            si choix <= N alors 
-                si choix >= minFourchette alors
-                    minFourchette <-- choix
-                fin si
-            sinon si choix >= N alors
-                si choix <= maxFourchette alors
-                    maxFourchette <-- choix
-                fin si
-            fin si 
+        si choix <= N alors 
+            si choix >= minFourchette alors
+                minFourchette <-- choix
+            fin si
+        sinon si choix >= N alors
+            si choix <= maxFourchette alors
+                maxFourchette <-- choix
+            fin si
+        fin si 
 
     tant que N != choix 
 
     écrire “Bravo vous avez trouvé en ”, essai ,” essais” 
 
-
+[![](https://mermaid.ink/img/pako:eNqNVNuO2jAQ_RXXL9tVw51w04JUdVupD-xDt1KlAg8mnoDVxKaOw4ZF-Zd95Tv4sU5iWJIF1M1DnByfOTNzkvGWeooDHVA_UE_ekmlDft5PJcELJBdy8dEX8nYqLTSHhZAyQ_l-N4_NbQbarUqlQjSTXIUTSYZEqnCugbBgv2NGCXzkQOpk_0Lk7BQg5Co2X5ZKeDCp7Xeezog3HNZCgiYBHGXCTWQAV5BGg0NCIb-pWHtLMAZfwSDEkhN0U5sVCxsRDYwf0wRZDg9fElIrleJpCDHBZxQIV2YCUcQEdmLXT6RxIBdC_O_S__r3YWvV7rDr9LCdXcdt5JK1Ro2sktO2pdiqHuPVWMiDzmhYbjB9E3QeWMpgliARm5Q0yB1ScvnZBbWsGa5-LUUA98J_2EryYWjZ6XtS-yxO8tQFjbO4y768hgof9U5ejnIvrwhYEcsvtn6t1gTzjVly-kyln-WSvWex5w6zZFKSKTr8xs936v_fxmLT19n2XoBLxRdG7iLxVZc8aWHgB0RxYArDOddsrchaxRFha3gmRqt4vd_haBLHzsphibIpzJyw54hNRh0agg6Z4HjkbDNsStHOEKZ0gI-c6T9TOpUp8lhs1ONGenRgdAwOjVecGSyTLTQL6cBnQYQocGGUHtszLD_KHLpikg62NKGDSrNZ7bl1t9FsuG673nD7TYduEG9169V-u9dp9buNbr_fcbupQ5-VQuFGtV13ey231Wp36s1OLvc738nqSP8Bl5-O4A?type=png)](https://mermaid.live/edit#pako:eNqNVNuO2jAQ_RXXL9tVw51w04JUdVupD-xDt1KlAg8mnoDVxKaOw4ZF-Zd95Tv4sU5iWJIF1M1DnByfOTNzkvGWeooDHVA_UE_ekmlDft5PJcELJBdy8dEX8nYqLTSHhZAyQ_l-N4_NbQbarUqlQjSTXIUTSYZEqnCugbBgv2NGCXzkQOpk_0Lk7BQg5Co2X5ZKeDCp7Xeezog3HNZCgiYBHGXCTWQAV5BGg0NCIb-pWHtLMAZfwSDEkhN0U5sVCxsRDYwf0wRZDg9fElIrleJpCDHBZxQIV2YCUcQEdmLXT6RxIBdC_O_S__r3YWvV7rDr9LCdXcdt5JK1Ro2sktO2pdiqHuPVWMiDzmhYbjB9E3QeWMpgliARm5Q0yB1ScvnZBbWsGa5-LUUA98J_2EryYWjZ6XtS-yxO8tQFjbO4y768hgof9U5ejnIvrwhYEcsvtn6t1gTzjVly-kyln-WSvWex5w6zZFKSKTr8xs936v_fxmLT19n2XoBLxRdG7iLxVZc8aWHgB0RxYArDOddsrchaxRFha3gmRqt4vd_haBLHzsphibIpzJyw54hNRh0agg6Z4HjkbDNsStHOEKZ0gI-c6T9TOpUp8lhs1ONGenRgdAwOjVecGSyTLTQL6cBnQYQocGGUHtszLD_KHLpikg62NKGDSrNZ7bl1t9FsuG673nD7TYduEG9169V-u9dp9buNbr_fcbupQ5-VQuFGtV13ey231Wp36s1OLvc738nqSP8Bl5-O4A)
 
 ### Exercice 3.2 
 
@@ -348,6 +346,8 @@
     fin tant que 
 
     écrire magasin 
+
+[![](https://mermaid.ink/img/pako:eNp1Us1ygjAYfJXMd7GOKAQKKjP1ZHvriZ4UDxECZkoSG0jVMj6Qz-GLNUC1evDLIZndL7ubnxoSmVIIISvkLtkQVaGPeSyQKSpSJvKnjIl-LDpoTXMmRIOm59NaV_0G7KjhcIhIWbJcRJVUdMlJTkom0AtyVv8dO8UqGmm-tAumKCol59S-5TesaPhIb526nDnHjmrqljK96FsRZuYZYplBX79wXRozfLOjqQt5t6PUfEGVXLb2bcLWnInkLvtgsGrbb50fq2dE7y_qb1JxXZCrQWS7aIjwvc3jo12luutqM9nnU6KaO-v9pevZnVz3TGABp4oTlpq3rBvpGKoN5TSG0CxToj5jiMXR9BFdyeggEggrpakFepuSis4ZyRXhEGakKA1KU2Z837vP0f4RC7ZEQFjDHkIPjyYBDvyJO_adwPPGFhwgxI4zcqfP2DfDcQPf848W_EhpVJ2RPw1cjIMxnrhT1_WCVm7Rkk2O4y8ZqcX1?type=png)](https://mermaid.live/edit#pako:eNp1Us1ygjAYfJXMd7GOKAQKKjP1ZHvriZ4UDxECZkoSG0jVMj6Qz-GLNUC1evDLIZndL7ubnxoSmVIIISvkLtkQVaGPeSyQKSpSJvKnjIl-LDpoTXMmRIOm59NaV_0G7KjhcIhIWbJcRJVUdMlJTkom0AtyVv8dO8UqGmm-tAumKCol59S-5TesaPhIb526nDnHjmrqljK96FsRZuYZYplBX79wXRozfLOjqQt5t6PUfEGVXLb2bcLWnInkLvtgsGrbb50fq2dE7y_qb1JxXZCrQWS7aIjwvc3jo12luutqM9nnU6KaO-v9pevZnVz3TGABp4oTlpq3rBvpGKoN5TSG0CxToj5jiMXR9BFdyeggEggrpakFepuSis4ZyRXhEGakKA1KU2Z837vP0f4RC7ZEQFjDHkIPjyYBDvyJO_adwPPGFhwgxI4zcqfP2DfDcQPf848W_EhpVJ2RPw1cjIMxnrhT1_WCVm7Rkk2O4y8ZqcX1)
 
 ### Exercice 3.3
 
@@ -377,6 +377,8 @@
     sinon
         écrire "404 Not found"
     fin si
+
+[![](https://mermaid.ink/img/pako:eNqFk8FS2zAQhl9FsxfKxE5s13GIp-UEmemhXMqpcQ6KJZudxhKV5UJq8kA8By_WlTUQU8pUM56xVv9-2l8r9VBqISGHaqfvyhtuLLu-KBSjIZVAVX-oUJ0Wyoe2skalXFQ8PW47e-qCfikMQ8bbFmv1RbUo5LqA_Qrrzkj2mVV818oCNm-lYqUNSZFE0SuBkVxcdc1WmvVsh0RRutkaORtJSk0VWtSKGH0BLfvEHuxDAYdjVW6MZZT3y3B02ViVnTFS2cuffh9C2DVuqBK_lQMdKW68SXnBnTMcXF-bzjn3EyJZmpOtoVxUJfnFUjrLOJls_g-veHfv4aNUwk8mHnr-2ty7nl84lW9OP26Oc0Be_67GK0cO7wxa6ctYz54eS-O6coJDIAxPZt6lvzXvwp4rGWCXxpCfIyuNUnalLVvpTol_ASGARpqGo6Ab27sY9exGNnTGOf0Kbn4UUKgD6Xhn9be9KiF3PQiguxXcygvkteHNc1DSIWnz1b-A4SEEcMsV5D3cQ54sommcLJdncZLF9C0C2EMefkyn0VkWZ3G6mEdpms0PAfzWmqDRdJlFSTRPkjhKFss0iwfc92HR7Xj4A4YWEOM?type=png)](https://mermaid.live/edit#pako:eNqFk8FS2zAQhl9FsxfKxE5s13GIp-UEmemhXMqpcQ6KJZudxhKV5UJq8kA8By_WlTUQU8pUM56xVv9-2l8r9VBqISGHaqfvyhtuLLu-KBSjIZVAVX-oUJ0Wyoe2skalXFQ8PW47e-qCfikMQ8bbFmv1RbUo5LqA_Qrrzkj2mVV818oCNm-lYqUNSZFE0SuBkVxcdc1WmvVsh0RRutkaORtJSk0VWtSKGH0BLfvEHuxDAYdjVW6MZZT3y3B02ViVnTFS2cuffh9C2DVuqBK_lQMdKW68SXnBnTMcXF-bzjn3EyJZmpOtoVxUJfnFUjrLOJls_g-veHfv4aNUwk8mHnr-2ty7nl84lW9OP26Oc0Be_67GK0cO7wxa6ctYz54eS-O6coJDIAxPZt6lvzXvwp4rGWCXxpCfIyuNUnalLVvpTol_ASGARpqGo6Ab27sY9exGNnTGOf0Kbn4UUKgD6Xhn9be9KiF3PQiguxXcygvkteHNc1DSIWnz1b-A4SEEcMsV5D3cQ54sommcLJdncZLF9C0C2EMefkyn0VkWZ3G6mEdpms0PAfzWmqDRdJlFSTRPkjhKFss0iwfc92HR7Xj4A4YWEOM)
 
 ### Exercice 3.4
 
@@ -429,6 +431,7 @@
     chaine = "ABC."
     chaine = "ABACD."
 
+[![](https://mermaid.ink/img/pako:eNqNk91O2zAUx1_F8w1DJG1Ck3RE6iTUZBoS28WKdrGGC5M47dESOzj2oJQ-EM_Bi82Oy5a2IOGbxOfjd_4-x17jnBcUx7is-F2-JEKiqyRjSC_KCmCLjyWw44xZ0w1dAGPGWjw_3Sh5bM2u6yJgIL9wMQc0Qd61se76plwxScWc57kSlOW0i_sfcydA0pkUGj4fPj_lAgRFRy2BFgRSjCItDvTnVgFqKdKo2mwbYryo4cDk0bDHE5QUL7jKsGz-cL_kJZVG1qslK-0T9AD7ktJhbUw_BEpbN60buVpn-NFWfjQHRlyh3t5HVG6FzXXTJmiQ4Y0lmbVD0uw_goDrfrbCO2NP9-U5mn49v_ieonR2hX5eJKkW3gmyg3wbWxJ132GXUNGpEno8MoEy4VKr36qDa_RhX55Zhzk9nVBuPemt7dkOb7Lt3QHTatxL7WNZfnCbTk7sWV8R9D742014x4H_JZvB_KCtqmRvMp3ITuXuRLCDa32NCRT6_a1NmQzLJa11R2L9WxDxO8MZ2-g4oiSfrViOYykUdbBqCiJpAmQhSI3jklStttICJBff7IPu3rWDG8JwvMb3OPaDgR9GgR96Iy8KzyI_cvAKx24QhtpxOjqLxuOx74WjjYMfONdYfxCMg9MojDztDkL_U9DxfnVOI2TzF8cbW38?type=png)](https://mermaid.live/edit#pako:eNqNk91O2zAUx1_F8w1DJG1Ck3RE6iTUZBoS28WKdrGGC5M47dESOzj2oJQ-EM_Bi82Oy5a2IOGbxOfjd_4-x17jnBcUx7is-F2-JEKiqyRjSC_KCmCLjyWw44xZ0w1dAGPGWjw_3Sh5bM2u6yJgIL9wMQc0Qd61se76plwxScWc57kSlOW0i_sfcydA0pkUGj4fPj_lAgRFRy2BFgRSjCItDvTnVgFqKdKo2mwbYryo4cDk0bDHE5QUL7jKsGz-cL_kJZVG1qslK-0T9AD7ktJhbUw_BEpbN60buVpn-NFWfjQHRlyh3t5HVG6FzXXTJmiQ4Y0lmbVD0uw_goDrfrbCO2NP9-U5mn49v_ieonR2hX5eJKkW3gmyg3wbWxJ132GXUNGpEno8MoEy4VKr36qDa_RhX55Zhzk9nVBuPemt7dkOb7Lt3QHTatxL7WNZfnCbTk7sWV8R9D742014x4H_JZvB_KCtqmRvMp3ITuXuRLCDa32NCRT6_a1NmQzLJa11R2L9WxDxO8MZ2-g4oiSfrViOYykUdbBqCiJpAmQhSI3jklStttICJBff7IPu3rWDG8JwvMb3OPaDgR9GgR96Iy8KzyI_cvAKx24QhtpxOjqLxuOx74WjjYMfONdYfxCMg9MojDztDkL_U9DxfnVOI2TzF8cbW38)
 
 ### Exercice 5.5
 
