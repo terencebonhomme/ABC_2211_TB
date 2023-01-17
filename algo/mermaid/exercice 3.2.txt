@@ -1,0 +1,11 @@
+flowchart TD
+    ending(fin)
+
+    beginning(début)    
+    --- assignStore[magasin = 0]
+    --- writeSum[/lire somme/]
+    --- whileSumSup0{s>0}
+        whileSumSup0 -- vrai --> ifSumEq1{s = 1}
+            ifSumEq1 -- vrai --> sumZero[somme = 0] --- incStore[magasin++] --> whileSumSup0
+            ifSumEq1 -- faux --> sumFormula[somme = S/2 - 1] --- incStore
+        whileSumSup0 -- faux --> writeStore[/écrire 'magasin'/] --- ending
