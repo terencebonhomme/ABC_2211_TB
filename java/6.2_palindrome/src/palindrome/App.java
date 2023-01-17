@@ -54,6 +54,45 @@ public class App {
 		sc.close();
 
 		// FIN PROGRAMME
+		
+		// DEBUT TESTS
+		
+		switch(texte) {
+		case "AA" :
+			System.out.println(estPalindrome == true);
+			break;
+		case "38783" :
+			System.out.println(estPalindrome == true);
+			break;
+		case "LAVAL" :
+			System.out.println(estPalindrome == true);
+			break;
+		case "LAVALAETEALAVAL" :
+			System.out.println(estPalindrome == true);
+			break;
+		case "ETLAMARINEVAVENIRAMALTE" :
+			System.out.println(estPalindrome == true);
+			break;
+		case "A10A" :
+			System.out.println(estPalindrome == false);
+			break;
+		case "382783" :
+			System.out.println(estPalindrome == false);
+			break;
+		case "LAV3AL" :
+			System.out.println(estPalindrome == false);
+			break;
+		case "LAVAL4AETEALAVAL" :
+			System.out.println(estPalindrome == false);
+			break;
+		case "ETLAMARINEVAVENI5RAMALTE" :
+			System.out.println(estPalindrome == false);
+			break;
+		default :
+			break;
+		}		
+		
+		// FIN TESTS
 	}
 
 }
