@@ -308,23 +308,23 @@
 
         essai <-- essai + 1 
 
-        si choix != N alors 
+        
 
-            si choix < N alors 
+            si choix <= N alors 
                 si choix >= minFourchette alors
                     minFourchette <-- choix
                 fin si
-            sinon 
+            sinon si choix >= N alors
                 si choix <= maxFourchette alors
                     maxFourchette <-- choix
                 fin si
             fin si 
 
-        fin si 
-
     tant que N != choix 
 
     écrire “Bravo vous avez trouvé en ”, essai ,” essais” 
+
+
 
 ### Exercice 3.2 
 
