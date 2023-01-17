@@ -14,4 +14,4 @@ flowchart TD
             whileCurrentDifDot --vrai--> ifCurrentEqLetter{"chaine[i] = lettre"}
                 ifCurrentEqLetter --vrai--> incCounter[occurence++] ---  whileCurrentDifDot
                 ifCurrentEqLetter --faux--> whileCurrentDifDot
-            whileCurrentDifDot --faux--> ending
+            whileCurrentDifDot --faux--> writeResult[/écrire 'occurrence'/] --- ending
