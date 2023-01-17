@@ -8,8 +8,8 @@ public class App {
 
 		// VARIABLES
 
-		String texte = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
-		String alphabet;
+		String texte;
+		String texte_minuscules;
 		int[] compteur_alphabet = new int[26];
 		
 		final int PREMIERE_LETTRE = 97;
@@ -21,8 +21,8 @@ public class App {
 
 		texte = sc.nextLine();
 
-		texte = texte.toLowerCase();
-		char[] texte_tableau = texte.toCharArray();
+		texte_minuscules = texte.toLowerCase();
+		char[] texte_tableau = texte_minuscules.toCharArray();
 
 		for (int lettre = PREMIERE_LETTRE; lettre <= DERNIERE_LETTRE; lettre++) {
 			compteur_alphabet[lettre - PREMIERE_LETTRE] = 0;
@@ -35,6 +35,8 @@ public class App {
 				System.out.print((char) lettre + ":" + compteur_alphabet[lettre - PREMIERE_LETTRE] + "; ");				
 			}
 		}
+		
+		sc.close();
 
 		// FIN PROGRAMME
 	}
