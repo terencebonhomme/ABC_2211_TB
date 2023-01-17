@@ -2,14 +2,25 @@ flowchart TD
     ending(fin)
 
     beginning(début)    
-    --- inputChoice[/écrire 'deviner le nombre mystere entre, minFourchette, et, maxFourchette'/]
     --- random[n = nombre aléatoire de 0 à n]
-    --- readChoice[/lire choix /]
+    --- inputChoice[/écrire 'deviner le nombre mystere entre, minFourchette, et, maxFourchette'/]    
+    --> readChoice[/lire choix /]
     --- incrementAttempt[essai = essai + 1]
-    --- ifDifferentN{choix != n}
-    ifDifferentN --- ifInfN{choix < n} 
-        ifInfN -- vrai --- ifChoiceSupMin{choix >= minFourchette} --- thenMin[minFourchette <-- choix] --- ifInfN
-        ifInfN -- faux --- ifChoixInfMax{choix <= maxFourchette} --- thenMax[maxFourchette <-- choix] --- ifInfN
-        
-
+    
+    --- ifInfEqN{choix <= n} 
+        ifInfEqN -- vrai --> 
+            ifChoiceSupMin{choix >= minFourchette} 
+                ifChoiceSupMin -- vrai --> thenMin[minFourchette <-- choix] 
+                --- doWhileDifN{n != choix}
+                ifChoiceSupMin -- faux --> doWhileDifN
+               
+        ifInfEqN -- faux --> ifSupEqN{choix >= n}              
+            ifSupEqN -- vrai -->
+                ifChoixInfMax{choix <= maxFourchette} 
+                    ifChoixInfMax -- vrai --> thenMax[maxFourchette <-- choix] --- doWhileDifN
+                    ifChoixInfMax -- faux --> doWhileDifN
+            ifSupEqN -- faux --> doWhileDifN
+    
+    doWhileDifN -- vrai --> inputChoice
+    doWhileDifN -- faux -->  writeResult[/écrire 'bravo vous avez trouvé en , essai, essais'/] --- ending
     
