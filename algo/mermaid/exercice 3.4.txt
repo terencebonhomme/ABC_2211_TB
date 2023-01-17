@@ -1,0 +1,17 @@
+flowchart TD
+    ending(fin)
+
+    beginning(début)
+    --- initFor[i = 0]    
+    --- initCounter[occurence = 0]
+    --- writeString[/écrire 'saisir une chaine qui se termine par un point'/]
+    --- readString[/lire chaine/]
+    --- writeLetter[/écrire 'saisir une lettre'/]
+    --- readLetter[/lire lettre/]
+    --- ifStringEmpty{"|chaine| = 0 ou |chaine| = 1 et chaine[0] = ."}
+        ifStringEmpty --vrai--> writeEmpty[/écrire 'LA CHAINE EST VIDE'/] --- ending
+        ifStringEmpty --faux--> whileCurrentDifDot{"chaine[i] != ."}
+            whileCurrentDifDot --vrai--> ifCurrentEqLetter{"chaine[i] = lettre"}
+                ifCurrentEqLetter --vrai--> incCounter[occurence++] ---  whileCurrentDifDot
+                ifCurrentEqLetter --faux--> whileCurrentDifDot
+            whileCurrentDifDot --faux--> ending
