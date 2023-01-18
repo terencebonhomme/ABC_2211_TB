@@ -9,7 +9,7 @@
     lire choix
 
     si choix >= 1 et choix <= |prenom| alors
-        écrire "Bonjour " + prenom[choix]
+        écrire "Bonjour " + prenom[choix - 1]
     sinon
         écrire "Error 404 not found"
     fin si
