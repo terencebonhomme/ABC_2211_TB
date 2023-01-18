@@ -2,7 +2,7 @@
 
 ## Exercice 1
 
-    tableau prenom(13) de chaînes de caractères
+    tableau prenom(12) de chaînes de caractères
     entier choix
 
     écrire "Quel est votre choix : "
