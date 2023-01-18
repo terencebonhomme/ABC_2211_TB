@@ -433,6 +433,37 @@
 
 [![](https://mermaid.ink/img/pako:eNqNk91O2zAUx1_F8w1DJG1Ck3RE6iTUZBoS28WKdrGGC5M47dESOzj2oJQ-EM_Bi82Oy5a2IOGbxOfjd_4-x17jnBcUx7is-F2-JEKiqyRjSC_KCmCLjyWw44xZ0w1dAGPGWjw_3Sh5bM2u6yJgIL9wMQc0Qd61se76plwxScWc57kSlOW0i_sfcydA0pkUGj4fPj_lAgRFRy2BFgRSjCItDvTnVgFqKdKo2mwbYryo4cDk0bDHE5QUL7jKsGz-cL_kJZVG1qslK-0T9AD7ktJhbUw_BEpbN60buVpn-NFWfjQHRlyh3t5HVG6FzXXTJmiQ4Y0lmbVD0uw_goDrfrbCO2NP9-U5mn49v_ieonR2hX5eJKkW3gmyg3wbWxJ132GXUNGpEno8MoEy4VKr36qDa_RhX55Zhzk9nVBuPemt7dkOb7Lt3QHTatxL7WNZfnCbTk7sWV8R9D742014x4H_JZvB_KCtqmRvMp3ITuXuRLCDa32NCRT6_a1NmQzLJa11R2L9WxDxO8MZ2-g4oiSfrViOYykUdbBqCiJpAmQhSI3jklStttICJBff7IPu3rWDG8JwvMb3OPaDgR9GgR96Iy8KzyI_cvAKx24QhtpxOjqLxuOx74WjjYMfONdYfxCMg9MojDztDkL_U9DxfnVOI2TzF8cbW38?type=png)](https://mermaid.live/edit#pako:eNqNk91O2zAUx1_F8w1DJG1Ck3RE6iTUZBoS28WKdrGGC5M47dESOzj2oJQ-EM_Bi82Oy5a2IOGbxOfjd_4-x17jnBcUx7is-F2-JEKiqyRjSC_KCmCLjyWw44xZ0w1dAGPGWjw_3Sh5bM2u6yJgIL9wMQc0Qd61se76plwxScWc57kSlOW0i_sfcydA0pkUGj4fPj_lAgRFRy2BFgRSjCItDvTnVgFqKdKo2mwbYryo4cDk0bDHE5QUL7jKsGz-cL_kJZVG1qslK-0T9AD7ktJhbUw_BEpbN60buVpn-NFWfjQHRlyh3t5HVG6FzXXTJmiQ4Y0lmbVD0uw_goDrfrbCO2NP9-U5mn49v_ieonR2hX5eJKkW3gmyg3wbWxJ132GXUNGpEno8MoEy4VKr36qDa_RhX55Zhzk9nVBuPemt7dkOb7Lt3QHTatxL7WNZfnCbTk7sWV8R9D742014x4H_JZvB_KCtqmRvMp3ITuXuRLCDa32NCRT6_a1NmQzLJa11R2L9WxDxO8MZ2-g4oiSfrViOYykUdbBqCiJpAmQhSI3jklStttICJBff7IPu3rWDG8JwvMb3OPaDgR9GgR96Iy8KzyI_cvAKx24QhtpxOjqLxuOx74WjjYMfONdYfxCMg9MojDztDkL_U9DxfnVOI2TzF8cbW38)
 
+### Exercice 4.1
+
+    entier n 
+    entier i
+    booléen est_premier 
+
+    est_premier <-- vrai
+
+    écrire "saisir un nombre"
+    lire n    
+
+    si n = 0 ou n = 1 alors
+        est_premier <-- faux
+    fin si
+
+    pour i = 2 à n - 1
+
+        si n mod i = 0 et est_premier alors
+            est_premier <-- faux
+        fin si
+
+        i <-- i + 1
+
+    fin pour 
+
+    si est_premier alors
+        écrire "n est un nombre premier"
+    sinon
+        écrire "n n'est pas un nombre premier"
+    fin si
+
 ### Exercice 5.5
 
     chaine texte
