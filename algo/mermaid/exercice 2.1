@@ -1,9 +1,0 @@
-flowchart TD
-    beginning(début)
-    --- readAge[/lire age/]
-    --- ifNoBorn{age < 0}
-    ifNoBorn -- oui --> thenWriteNoBorn[/écrire 'Vous n'êtes pas encore né'/]    
-    ifNoBorn -- non--> ifMinor{age < 18}
-    ifMinor -- oui --> thenWriteMinor[/ écrire 'Vous êtes mineur'/] --- ending(fin)
-    ifMinor -- non --> thenWriteMajor[/ écrire 'Vous êtes majeur' /] --- ending(fin)
-    

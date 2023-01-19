@@ -1,9 +1,0 @@
-flowchart TD
-    beginning(début)
-    --- writeInputRadius[/écrire 'Veuillez saisir le rayon de la sphère'/]
-    --- readRadius[/lire rayon/]
-    --- calculateArea["aire = 4 * PI * rayon^2"]
-    --- writeArea[/écrire 'L'aire de la sphère est, aire'/]
-    --- calculateVolume["volume = (4/3) * PI * rayon^3"]
-    --- writeVolume[/écrire 'Le volume de la sphère est, volume'/]
-    --- ending(fin)

@@ -1,9 +1,0 @@
-flowchart TD
-    ending(fin)
-
-    beginning(début)
-    --- writeInput[/écrire 'Quel est votre choix :'/]
-    --- readChoice[/lire choix/]
-    --- ifChoice{"choix >= 1 et choix <= |prenom|"}
-        ifChoice --vrai--- writeFirstname[/"écrire 'Bonjour , prenom[choix - 1]'"/] --- ending
-        ifChoice --faux--- writeError[/écrire 'Error 404 not found'/] --- ending
