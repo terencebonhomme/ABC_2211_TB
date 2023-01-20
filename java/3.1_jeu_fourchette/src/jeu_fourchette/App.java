@@ -41,13 +41,12 @@ public class App {
 			
 			essai++;
 			
-			if(choix != n) {
-				if(choix < n) {
-					if(choix >= minFourchette) minFourchette = choix;
-				} else {
-					if(choix <= maxFourchette) maxFourchette = choix;
-				}
-			}			
+			if(choix < n) {
+				if(choix >= minFourchette) minFourchette = choix + 1;
+			} else {
+				if(choix <= maxFourchette) maxFourchette = choix - 1;
+			}
+				
 		}while(n != choix);
 		
 		System.out.println("Bravo vous avez trouve en " + essai + " essais");
