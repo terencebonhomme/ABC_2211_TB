@@ -2,12 +2,19 @@
 
 ## Pseudo-code
 
-    PROCEDURE moyenne (VAL entier nombre1, VAL entier nombre2)
+    PROGRAMME
 
-        réel moyenne
+        réel a, b
 
-        moyenne <-- (nombre 1 + nombre2) / 2
+        écrire "saisir a et b"
+        lire a, b
 
-        écrire "moyenne : ", moyenne
+        écrire "moyenne :", moyenne(a, b)
+
+    FIN PROGRAMME
+
+    entier FONCTION moyenne (VAL entier nombre1, VAL entier nombre2)
+
+        RETOURNER (nombre 1 + nombre2) / 2
         
-    FIN PROCEDURE
+    FIN FONCTION
