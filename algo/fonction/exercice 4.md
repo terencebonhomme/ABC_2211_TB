@@ -2,26 +2,23 @@
 
 ## Pseudo-code
 
-    BOOLEAN FONCTION bissextile (VAL entier annee)
+    PROGRAMME
 
+        entier annee
+
+        écrire "saisir annee"
         lire annee
 
-        si annee mod 4 != 0 alors 
+        si bissextile alors
+            écrire "annee bissextile"
+        sinon
+            écrire "annee non bissextile"
+        fin si
 
-            RETOURNE faux
+    FIN PROGRAMME
 
-        sinon  
+    BOOLEAN FONCTION bissextile (VAL entier annee)
 
-            si annee mod 100 = 0 et annee mod 400 != 0 alors 
-
-                RETOURNE vrai
-
-            sinon 
-
-                RETOURNE faux
-                
-            fin si 
-
-        fin si 
+        RETOURNE annee mod 4 == 0 && (annee mod 100 != 0 || annee mod 400 == 0)
         
     FIN FONCTION
