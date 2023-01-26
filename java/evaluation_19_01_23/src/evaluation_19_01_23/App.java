@@ -80,7 +80,7 @@ public class App {
 					// affichage pour les mois qui commencent par une voyelle
 					if( 
 							mois[numero_mois - 1].equals("avril")
-							|| mois[numero_mois - 1].equals("août")
+							|| mois[numero_mois - 1].equals("aout")
 							|| mois[numero_mois - 1].equals("octobre") 
 					){
 						System.out.println("Le mois d'" + mois[numero_mois - 1] + " est pair.");
@@ -104,17 +104,7 @@ public class App {
 					
 					// mois impair donc jours pairs
 				
-					// affichage pour les mois qui commencent par une voyelle
-					if( 
-							mois[numero_mois - 1].equals("avril") 
-							|| mois[numero_mois - 1].equals("août")
-							|| mois[numero_mois - 1].equals("octobre")
-					){
-						System.out.println("Le mois d'" + mois[numero_mois - 1] + " est impair.");
-					// affichage pour les mois qui commencent par une consomne
-					}else {
-						System.out.println("Le mois de " + mois[numero_mois - 1] + " est impair.");
-					}
+					System.out.println("Le mois de " + mois[numero_mois - 1] + " est impair.");
 					
 					// afficher la liste des jours
 					
