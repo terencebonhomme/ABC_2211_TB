@@ -2,7 +2,18 @@
 
 ## Pseudo-code
 
-    PROCEDURE inverser (VAR entier nombre1, VAR entier nombre2)
+    PROGRAMME
+
+        entier nombre1, nombre2
+
+        écrire "saisir nombre 1 et nombre 2"
+        lire nombre1, nombre 2
+
+        inverser(nombre1, nombre2)
+
+    FIN PROGRAMME
+
+    PROCEDURE inverser (VAL entier nombre1, VAL entier nombre2)
 
         entier temp
         
@@ -10,7 +21,6 @@
         nombre1 <-- nombre2
         nombre2 <-- temp
 
-        écrire "nombre 1 : ", nombre 1
-        écrire "nombre 2 : ", nombre 2
+        écrire "nombre 1 : ", nombre1, " et nombre 2", nombre2
 
     FIN PROCEDURE
