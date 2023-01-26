@@ -5,15 +5,15 @@ import java.util.Scanner;
 public class App {
 
 	public static void main(String[] args) {
-		// code modifié par rapport au pseudo code
+		// code modifie par rapport au pseudo code
 		
 		/**
 		 * entier numero_mois
-		 * tableau mois de chaînes de caractères 
+		 * tableau mois de chaines de caracteres 
 		 * 
 		 * faire
 		 * 
-		 * 		écrire "Saisissez un numéro de mois : "
+		 * 		ecrire "Saisissez un numero de mois : "
 		 * 			lire numero_mois
 		 * 
 		 * 		si numero >= 1 et numero <= 12 alors
@@ -24,16 +24,16 @@ public class App {
 		 * 					écrire "Les jours impairs du mois sont : "
 		 * 					pour numero_jour de 1 à 31 faire
 		 * 						si numero_jour mod 2 = 1 et numero_jour mod 3 != 0 alors // jours impairs non multiple de 3
-		 * 							écrire numero_jour, ", "
+		 * 							ecrire numero_jour, ", "
 		 *						fin si 	 
 		 * 					fin pour
-		 * 				sinon si numero mod 2 = 1 alors // éviter le sinon pour la clarté de la logique
+		 * 				sinon si numero mod 2 = 1 alors // eviter le sinon pour la clarte de la logique
 		 * 					// mois impair donc jours pairs
-		 * 					écrire "Le mois d'", mois(numero), " est impair."
-		 * 					écrire "Les jours pairs du mois sont : "
+		 * 					ecrire "Le mois d'", mois(numero), " est impair."
+		 * 					ecrire "Les jours pairs du mois sont : "
 		 * 					pour numero_jour de 1 à 31 faire
 		 * 						si numero_jour mod 2 = 0 et numero_jour mod 10 != 0 alors // jours impairs non multiple de 10
-		 * 							écrire numero_jour, ", "
+		 * 							ecrire numero_jour, ", "
 		 *						fin si 	 
 		 * 					fin pour
 		 * 				fin si
@@ -41,7 +41,7 @@ public class App {
 		 * 				
 		 * 			fin si
 		 * 		sinon
-		 * 			écrire "Numéro de mois invalide, veuillez recommencer"
+		 * 			ecrire "Numero de mois invalide, veuillez recommencer"
 		 * 		fin si 
 		 * 	
 		 * tant que numero_mois < 1 ou > 12
@@ -57,8 +57,8 @@ public class App {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		// l'utilisateur ne saisit pas l'année; on considère que l'année est non bissextile pour le mois de février
-		// on ne veut pas complixifier le programme ou s'éloigner de la consigne avec une nouvelle entrée pour l'année
+		// l'utilisateur ne saisit pas l'annee; on considere que l'annee est non bissextile pour le mois de fevrier
+		// on ne veut pas complexifier le programme ou s'eloigner de la consigne avec une nouvelle entree pour l'annee
 		
 		// DEBUT PROGRAMME
 		
@@ -93,14 +93,14 @@ public class App {
 					
 					System.out.println("Les jours impairs sont :");
 					
-					for(int numero_jour = 1; numero_jour <= 31; numero_jour++) {
+					for(int numero_jour = 1; numero_jour <= nombre_jours[numero_mois - 1]; numero_jour++) {
 						if(numero_jour % 2 == 1 && numero_jour % 3 != 0) { // jours impairs non multiple de 3
 							System.out.print(numero_jour + ", ");		
 						}
 					}
 					
 				// mois impair
-				}else if(numero_mois % 2 == 1) { // éviter le sinon pour la clarté de la logique
+				}else if(numero_mois % 2 == 1) { // eviter le sinon pour la clarte de la logique
 					
 					// mois impair donc jours pairs
 				
@@ -116,7 +116,7 @@ public class App {
 						}
 					}
 										
-				}else { // afficher" erreur "s'il y a un problème, mais ça ne devrait jamais s'afficher
+				}else { // afficher" erreur "s'il y a un probleme, mais �a ne devrait jamais s'afficher
 					System.out.print("Erreur");
 				}
 				
