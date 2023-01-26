@@ -17,7 +17,7 @@ public class App {
 
 		gagnant = jeu(premier);
 
-		System.out.println("Le vainqueur est " + gagnant + "!");
+		System.out.println("\nLe vainqueur est " + gagnant + "!");
 		
 		// FIN PROGRAMME
 
