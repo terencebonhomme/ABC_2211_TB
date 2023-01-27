@@ -4,29 +4,23 @@ public class App {
 
 	public static void main(String[] args) {
 
-		Bouteille eau = new Bouteille();
+		Bouteille eau = new Bouteille(1.5, 1.5, false, "eau");
 		
-		// ouvrir
-		System.out.println("eau.ouvert : " + eau.ouvert);
-		System.out.println("eau.ouvrir()");
+		eau.vider(0.7);
 		eau.ouvrir();
-		System.out.println("eau.ouvert : " + eau.ouvert);
+		eau.viderTout();
+		eau.remplirTout();
+		eau.donnerNom("eau gazeuse");
+		eau.vider(0.5);
+		eau.remplir(0.6);
 		
-		// vider
-		System.out.println("eau.volumeCourant : " + eau.volumeCourant);		
-		System.out.println("eau.vider()");
-		eau.vider();
-		System.out.println("eau.volumeCourant : " + eau.volumeCourant);
+		/*Bouteille soda = new Bouteille();
 		
-		// remplir
-		System.out.println("eau.remplir(50.5)");
-		eau.remplir(50.5);
-		System.out.println("eau.volumeCourant : " + eau.volumeCourant);
-		
-		// fermer
-		System.out.println("eau.fermer()");
-		eau.fermer();
-		System.out.println("eau.ouvert : " + eau.ouvert);
+		soda.donnerNom("soda");
+		soda.remplir(10);
+		soda.vider(0.5);
+		soda.viderTout();
+		soda.remplirTout();*/	
 		
 	}
 
