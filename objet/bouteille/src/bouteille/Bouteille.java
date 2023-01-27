@@ -31,13 +31,13 @@ public class Bouteille {
 
 	// methodes
 
-	public boolean remplir(double quantite) {
-		System.out.println("on veut remplir la bouteille " + nom + " remplie a " + contenanceLitre + " L sur " + CAPACITE_LITRE + " L de " + quantite + " L");
+	public boolean remplir(double quantiteLitre) {
+		System.out.println("on veut remplir la bouteille " + nom + " remplie a " + contenanceLitre + " L sur " + CAPACITE_LITRE + " L de " + quantiteLitre + " L");
 		
 		if(estOuverte) {
-			if (contenanceLitre + quantite <= CAPACITE_LITRE) {
-				System.out.println("\ton remplit la bouteille de " + quantite + " L");
-				contenanceLitre += quantite;
+			if (contenanceLitre + quantiteLitre <= CAPACITE_LITRE) {
+				System.out.println("\ton remplit la bouteille de " + quantiteLitre + " L");
+				contenanceLitre += quantiteLitre;
 				return true;
 			} else {
 				System.out.println("\ton ne peut pas depasser la capacite de la bouteille");
@@ -62,18 +62,18 @@ public class Bouteille {
 				return false;
 			}
 		} else {
-			System.out.println("\ton ne peut pas remplir une bouteille fermée");
+			System.out.println("\ton ne peut pas remplir une bouteille fermee");
 			return false;
 		}
 	}
 	
-	public boolean vider(double quantite) {
-		System.out.println("on veut vider la bouteille " + nom + " remplie à " + contenanceLitre + " L sur " + CAPACITE_LITRE + " L de " + quantite + " L");
+	public boolean vider(double quantiteLitre) {
+		System.out.println("on veut vider la bouteille " + nom + " remplie a " + contenanceLitre + " L sur " + CAPACITE_LITRE + " L de " + quantiteLitre + " L");
 		
 		if(estOuverte) {
-			if(contenanceLitre >= quantite) {
-				System.out.println("\ton vide la bouteille de " + quantite + " L");
-				contenanceLitre -= quantite;
+			if(contenanceLitre >= quantiteLitre) {
+				System.out.println("\ton vide la bouteille de " + quantiteLitre + " L");
+				contenanceLitre -= quantiteLitre;
 				return true;
 			} else {
 				System.out.println("\ton ne peut pas vider plus ce que contient la bouteille");
