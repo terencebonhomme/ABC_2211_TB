@@ -19,7 +19,9 @@ public class App {
 		Bouteille soda = new Bouteille();
 		
 		soda.donnerNom("soda");
+		//soda.vider(0.5);
 		soda.ouvrir();
+		//soda.vider(0.5);
 		soda.remplir(10);
 		soda.vider(0.5);
 		soda.viderTout();

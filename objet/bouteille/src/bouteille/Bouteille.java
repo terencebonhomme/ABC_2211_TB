@@ -14,30 +14,30 @@ public class Bouteille {
 	public Bouteille() {
 		System.out.println("on cree une bouteille sans nom de 1 L remplie a 0 L");
 		
-		contenanceLitre = 0;
-		CAPACITE_LITRE = 1;
-		estOuverte = false;
-		nom = "sans nom";
+		this.contenanceLitre = 0;
+		this.CAPACITE_LITRE = 1;
+		this.estOuverte = false;
+		this.nom = "sans nom";
 	}
 
 	public Bouteille(double _contenanceLitre, double _capaciteLitre, boolean _estOuverte, String _nom) {
 		System.out.println("on cree une bouteille " + _nom + " de " + _capaciteLitre + " L remplie a " + _contenanceLitre + " L");
 		
-		contenanceLitre = _contenanceLitre;
-		CAPACITE_LITRE = _capaciteLitre;
-		estOuverte = _estOuverte;
-		nom = _nom;
+		this.contenanceLitre = _contenanceLitre;
+		this.CAPACITE_LITRE = _capaciteLitre;
+		this.estOuverte = _estOuverte;
+		this.nom = _nom;
 	}
 
 	// methodes
 
 	public boolean remplir(double quantiteLitre) {
-		System.out.println("on veut remplir la bouteille " + nom + " remplie a " + contenanceLitre + " L sur " + CAPACITE_LITRE + " L de " + quantiteLitre + " L");
+		System.out.println("on veut remplir la bouteille " + this.nom + " remplie a " + this.contenanceLitre + " L sur " + this.CAPACITE_LITRE + " L de " + quantiteLitre + " L");
 		
-		if(estOuverte) {
-			if (contenanceLitre + quantiteLitre <= CAPACITE_LITRE) {
+		if(this.estOuverte) {
+			if (this.contenanceLitre + quantiteLitre <= this.CAPACITE_LITRE) {
 				System.out.println("\ton remplit la bouteille de " + quantiteLitre + " L");
-				contenanceLitre += quantiteLitre;
+				this.contenanceLitre += quantiteLitre;
 				return true;
 			} else {
 				System.out.println("\ton ne peut pas depasser la capacite de la bouteille");
@@ -50,12 +50,12 @@ public class Bouteille {
 	}
 	
 	public boolean remplirTout() {
-		System.out.println("on veut remplir toute la bouteille " + nom);
+		System.out.println("on veut remplir toute la bouteille " + this.nom);
 		
-		if(estOuverte) {
-			if(contenanceLitre < CAPACITE_LITRE) {
+		if(this.estOuverte) {
+			if(this.contenanceLitre < this.CAPACITE_LITRE) {
 				System.out.println("\ton remplit toute la bouteille");
-				contenanceLitre = CAPACITE_LITRE;
+				this.contenanceLitre = this.CAPACITE_LITRE;
 				return true;
 			} else {
 				System.out.println("\ton ne peut pas remplir une bouteille pleine");
@@ -68,12 +68,12 @@ public class Bouteille {
 	}
 	
 	public boolean vider(double quantiteLitre) {
-		System.out.println("on veut vider la bouteille " + nom + " remplie a " + contenanceLitre + " L sur " + CAPACITE_LITRE + " L de " + quantiteLitre + " L");
+		System.out.println("on veut vider la bouteille " + this.nom + " remplie a " + this.contenanceLitre + " L sur " + this.CAPACITE_LITRE + " L de " + quantiteLitre + " L");
 		
-		if(estOuverte) {
-			if(contenanceLitre >= quantiteLitre) {
+		if(this.estOuverte) {
+			if(this.contenanceLitre >= quantiteLitre) {
 				System.out.println("\ton vide la bouteille de " + quantiteLitre + " L");
-				contenanceLitre -= quantiteLitre;
+				this.contenanceLitre -= quantiteLitre;
 				return true;
 			} else {
 				System.out.println("\ton ne peut pas vider plus ce que contient la bouteille");
@@ -87,12 +87,12 @@ public class Bouteille {
 	}
 
 	public boolean viderTout() {
-		System.out.println("on veut vider toute la bouteille " + nom);
+		System.out.println("on veut vider toute la bouteille " + this.nom);
 		
-		if(estOuverte) {
-			if(contenanceLitre > 0) {
+		if(this.estOuverte) {
+			if(this.contenanceLitre > 0) {
 				System.out.println("\ton vide toute la bouteille");
-				contenanceLitre = 0;
+				this.contenanceLitre = 0;
 				return true;
 			} else {
 				System.out.println("\ton ne peut pas vider une bouteille vide");
@@ -105,11 +105,11 @@ public class Bouteille {
 	}
 
 	public boolean ouvrir() {
-		System.out.println("on veut ouvrir la bouteille " + nom);
+		System.out.println("on veut ouvrir la bouteille " + this.nom);
 		
-		if (!estOuverte) {
+		if (!this.estOuverte) {
 			System.out.println("\ton ouvre la bouteille");
-			estOuverte = true;
+			this.estOuverte = true;
 			return true;
 		} else {
 			System.out.println("\ton ne peut pas ouvrir une bouteille ouverte");
@@ -119,11 +119,11 @@ public class Bouteille {
 	}
 
 	public boolean fermer() {
-		System.out.println("on veut fermer la bouteille " + nom);
+		System.out.println("on veut fermer la bouteille " + this.nom);
 		
-		if (estOuverte) {
+		if (this.estOuverte) {
 			System.out.println("\ton ferme la bouteille");
-			estOuverte = false;
+			this.estOuverte = false;
 			return true;
 		} else {
 			System.out.println("\ton ne peut pas fermer une bouteille fermee");
@@ -131,10 +131,10 @@ public class Bouteille {
 		}		
 	}
 	
-	public String donnerNom(String _nom) {
-		System.out.println("on change le nom de la bouteille " + nom + " par " + _nom);
+	public String donnerNom(String nom) {
+		System.out.println("on change le nom de la bouteille " + this.nom + " par " + nom);
 		
-		nom = _nom;
-		return nom;
+		this.nom = nom;
+		return this.nom;
 	}
 }
