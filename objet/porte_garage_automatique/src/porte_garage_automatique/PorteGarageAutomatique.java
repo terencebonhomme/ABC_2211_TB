@@ -14,7 +14,6 @@ public class PorteGarageAutomatique {
 
 	// constructeurs
 
-	// constructeur par défaut
 	public PorteGarageAutomatique() {
 		this.nom = "";
 		this.typeMoteur = "moteur a cremaillere";
@@ -25,7 +24,6 @@ public class PorteGarageAutomatique {
 		this.tempsOuverture = 5;
 	}
 
-	// constructeur avec des variables
 	public PorteGarageAutomatique(String _nom, String _typeMoteur, String _typePorte, String _materiel, double _pourcentOuverte, double _tempsOuverture) {
 		this.nom = _nom;
 		this.typeMoteur = _typeMoteur;
@@ -35,42 +33,58 @@ public class PorteGarageAutomatique {
 		this.tempsOuverture = _tempsOuverture;
 	}
 
-	// méthodes
+	// getters
 
 	public String getNom() {
-		return this.nom;
+		return nom;
 	}
 
 	public String getTypeMoteur() {
-		return this.typeMoteur;
+		return typeMoteur;
 	}
 
 	public String getTypePorte() {
-		return this.typePorte;
+		return typePorte;
 	}
 
 	public String getMateriel() {
-		return this.materiel;
+		return materiel;
 	}
 
 	public Commande[] getCommandes() {
-		return this.commandes;
+		return commandes;
 	}
+	
+	public double getPourcentOuverte() {
+		return pourcentOuverte;
+	}
+
+	public double getTempsOuverture() {
+		return tempsOuverture;
+	}
+	
+	// setters
 	
 	public void setCommandes(Commande[] liste) {
 		this.commandes = liste;
 	}
-
-	public double getPourcentOuverte() {
-		return this.pourcentOuverte;
-	}
-
-	public double getTempsOuverture() {
-		return this.tempsOuverture;
-	}
 	
 	public void setPourcentOuverte(double pourcentage) {
 		this.pourcentOuverte = pourcentage;
+	}
+	
+	// methode
+	
+	public void ajouterCommande(Commande commande) {
+		Commande[] liste_commande = new Commande[this.commandes.length + 1];
+		
+		for(int i = 0; i < this.commandes.length; i++) {
+			liste_commande[i] = this.commandes[i];
+		}
+		
+		liste_commande[liste_commande.length - 1] = commande;
+		
+		this.commandes = liste_commande;
 	}
 
 	@Override
