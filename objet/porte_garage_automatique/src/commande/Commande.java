@@ -1,31 +1,53 @@
-package porte_garage_automatique;
+package commande;
 
-public class CommandeAvecBatterie extends Commande {
-	
+import porte.PorteGarageAutomatique;
+
+public abstract class Commande {
+
 	// attributs
 
-	private boolean aBatterieDedans; // TODO variable à retirer pour redondance ?
-	private Batterie batterieDedans;
+	private final String type;
+	private boolean fonctionne;
+	private PorteGarageAutomatique porte;
 
 	// constructeurs
+
+	public Commande(String _type, boolean _fonctionne, PorteGarageAutomatique _porte) {
+		this.type = _type;
+		this.fonctionne = _fonctionne;
+		this.porte = _porte;
+	}
+
+	// getters
+
+	public boolean getFonctionne() {
+		return fonctionne;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public PorteGarageAutomatique getPorte() {
+		return porte;
+	}
 	
-	public CommandeAvecBatterie(String _type, boolean _fonctionne, PorteGarageAutomatique _porte,
-			boolean _aBatterieDedans, Batterie _batterieDedans) {
-		super(_type, _fonctionne, _porte);
-		this.aBatterieDedans = _aBatterieDedans;
-		this.batterieDedans = _batterieDedans;
+	// setters
+
+	public void setPorte(PorteGarageAutomatique porte) {
+		this.porte = porte;
 	}
 	
 	// methodes
 
-	@Override
+	// tout par défaut
 	public boolean ouvrir() {
-		if ((super.getType() == "locale" || super.getType() == "distante") && super.getFonctionne()
-				&& super.getPorte().getPourcentOuverte() < 100 && this.aBatterieDedans && this.batterieDedans.getPourcentRestant() > 0) {
+		if ((this.type == "locale" || this.type == "distante") && this.fonctionne
+				&& this.getPorte().getPourcentOuverte() < 100) {
 			this.getPorte().setPourcentOuverte(100);
-			if (super.getType() == "locale") {
+			if (this.type == "locale") {
 				System.out.println("ouverture depuis une commande locale");
-			} else if (super.getType() == "distante") {
+			} else if (this.type == "distante") {
 				System.out.println("ouverture depuis une commande distante");
 			}
 			return true;
@@ -34,17 +56,16 @@ public class CommandeAvecBatterie extends Commande {
 		}
 	}
 
-	@Override
 	public boolean ouvrir(double tempsPressionSecondes) {
-		if ((super.getType() == "locale" || super.getType() == "distante") && super.getFonctionne()
-				&& this.getPorte().getPourcentOuverte() < 100 && this.aBatterieDedans && this.batterieDedans.getPourcentRestant() > 0) {
+		if ((this.type == "locale" || this.type == "distante") && this.fonctionne
+				&& this.getPorte().getPourcentOuverte() < 100) {
 			if (tempsPressionSecondes / this.getPorte().getTempsOuverture() * 100
 					+ this.getPorte().getPourcentOuverte() <= 100) {
 				this.getPorte().setPourcentOuverte(this.getPorte().getPourcentOuverte()
 						+ tempsPressionSecondes / this.getPorte().getTempsOuverture() * 100);
-				if (super.getType() == "locale") {
+				if (this.type == "locale") {
 					System.out.println("ouverture depuis une commande locale");
-				} else if (super.getType() == "distante") {
+				} else if (this.type == "distante") {
 					System.out.println("ouverture depuis une commande distante");
 				}
 			} else {
@@ -56,14 +77,14 @@ public class CommandeAvecBatterie extends Commande {
 		}
 	}
 
-	@Override
+	// tout par défaut
 	public boolean fermer() {
-		if ((super.getType() == "locale" || super.getType() == "distante") && super.getFonctionne()
-				&& this.getPorte().getPourcentOuverte() > 0 && this.aBatterieDedans && this.batterieDedans.getPourcentRestant() > 0) {
+		if ((this.type == "locale" || this.type == "distante") && this.fonctionne
+				&& this.getPorte().getPourcentOuverte() > 0) {
 			this.getPorte().setPourcentOuverte(0);
-			if (super.getType() == "locale") {
+			if (this.type == "locale") {
 				System.out.println("fermeture depuis une commande locale");
-			} else if (super.getType() == "distante") {
+			} else if (this.type == "distante") {
 				System.out.println("fermeture depuis une commande distante");
 			}
 			return true;
@@ -72,17 +93,16 @@ public class CommandeAvecBatterie extends Commande {
 		}
 	}
 
-	@Override
 	public boolean fermer(double tempsPressionSecondes) {
-		if ((super.getType() == "locale" || super.getType() == "distante") && super.getFonctionne()
+		if ((this.type == "locale" || this.type == "distante") && this.fonctionne
 				&& this.getPorte().getPourcentOuverte() > 0) {
 			if (tempsPressionSecondes / this.getPorte().getTempsOuverture() * 100 <= this.getPorte()
-					.getPourcentOuverte() && this.aBatterieDedans && this.batterieDedans.getPourcentRestant() > 0) {
+					.getPourcentOuverte()) {
 				this.getPorte().setPourcentOuverte(this.getPorte().getPourcentOuverte()
 						- tempsPressionSecondes / this.getPorte().getTempsOuverture() * 100);
-				if (super.getType() == "locale") {
+				if (this.type == "locale") {
 					System.out.println("fermeture depuis la commande locale");
-				} else if (super.getType() == "distante") {
+				} else if (this.type == "distante") {
 					System.out.println("fermeture depuis la commande distante");
 				}
 			} else {
@@ -93,4 +113,5 @@ public class CommandeAvecBatterie extends Commande {
 			return false;
 		}
 	}
+
 }

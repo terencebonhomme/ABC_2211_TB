@@ -1,34 +1,34 @@
-package porte_garage_automatique;
+package porte;
 
-public class PorteGarageAutomatique {
+import batterie.Batterie;
+import commande.Commande;
+import commande.CommandeAvecBatterie;
+import commande.CommandeSansBatterie;
+
+public class PorteGarageAutomatique extends PorteGarage {
 
 	// attributs
 
-	private String nom;
 	private final String typeMoteur;
-	private final String typePorte;
-	private final String materiel;
 	private Commande[] commandes;
-	private double pourcentOuverte;
 	private final double tempsOuverture;
 
 	// constructeurs
 
 	public PorteGarageAutomatique() {
-		this.nom = "";
+		super("sans nom", "battante", "PVC", 0.0);
+		Batterie batterie = new Batterie();
 		this.typeMoteur = "moteur a cremaillere";
-		this.typePorte = "battante";
-		this.materiel = "PVC";
-		this.commandes = new Commande[] { new Commande("locale", true, this), new Commande("distante", true, this) };
+		this.commandes = new Commande[] { new CommandeSansBatterie("locale", true, this),
+				new CommandeAvecBatterie("distante", true, this, batterie) };
 		this.pourcentOuverte = 0;
 		this.tempsOuverture = 5;
 	}
 
-	public PorteGarageAutomatique(String _nom, String _typeMoteur, String _typePorte, String _materiel, double _pourcentOuverte, double _tempsOuverture) {
-		this.nom = _nom;
+	public PorteGarageAutomatique(String _nom, String _typeMoteur, String _typePorte, String _materiel,
+			double _pourcentOuverte, double _tempsOuverture) {
+		super(_nom, _typePorte, _materiel, _tempsOuverture);
 		this.typeMoteur = _typeMoteur;
-		this.typePorte = _typePorte;
-		this.materiel = _materiel;
 		this.pourcentOuverte = _pourcentOuverte;
 		this.tempsOuverture = _tempsOuverture;
 	}
@@ -54,7 +54,7 @@ public class PorteGarageAutomatique {
 	public Commande[] getCommandes() {
 		return commandes;
 	}
-	
+
 	public double getPourcentOuverte() {
 		return pourcentOuverte;
 	}
@@ -62,28 +62,28 @@ public class PorteGarageAutomatique {
 	public double getTempsOuverture() {
 		return tempsOuverture;
 	}
-	
+
 	// setters
-	
+
 	public void setCommandes(Commande[] liste) {
 		this.commandes = liste;
 	}
-	
+
 	public void setPourcentOuverte(double pourcentage) {
 		this.pourcentOuverte = pourcentage;
 	}
-	
+
 	// methode
-	
+
 	public void ajouterCommande(Commande commande) {
 		Commande[] liste_commande = new Commande[this.commandes.length + 1];
-		
-		for(int i = 0; i < this.commandes.length; i++) {
+
+		for (int i = 0; i < this.commandes.length; i++) {
 			liste_commande[i] = this.commandes[i];
 		}
-		
+
 		liste_commande[liste_commande.length - 1] = commande;
-		
+
 		this.commandes = liste_commande;
 	}
 
@@ -94,7 +94,8 @@ public class PorteGarageAutomatique {
 		// liste des commandes de la porte
 		for (int i = 0; i < this.commandes.length; i++) {
 			commandes = commandes + "\n\tcommande " + i + " => type : " + this.commandes[i].getType()
-					+ "; fonctionne : " + this.commandes[i].getFonctionne();
+					+ "; fonctionne : " + this.commandes[i].getFonctionne() + "; porte : "
+					+ this.commandes[i].getPorte().getNom();
 		}
 
 		return "nom = " + this.nom + "\ntypeMoteur = " + this.typeMoteur + "\ntypePorte = " + this.typePorte
