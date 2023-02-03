@@ -142,4 +142,8 @@ public class Bouteille {
 		this.nom = nom;
 		return this.nom;
 	}
+	
+	public String toString() {
+		return "contenanceLitre = " + contenanceLitre + "\nCAPACITE_LITRE = " + CAPACITE_LITRE + "\nestOuverte = " + estOuverte + "\nnom = " + nom + "\n";
+	}
 }
