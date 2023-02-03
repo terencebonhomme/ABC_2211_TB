@@ -38,7 +38,9 @@ public class Ascenseur {
 	// methodes
 
 	public boolean monter(int etage, int nombre_personnes_etage) {
-		if (this.alimente && etage <= nombre_etages && etage_courant < etage && porte_fermee && !descend) {
+		if(nombre_personnes_etage < 0) {			
+			return false;
+		} else if (this.alimente && etage <= nombre_etages && etage_courant < etage && porte_fermee && !descend) {
 			this.etage_courant = etage;
 			this.descend = false;
 			// les personnes doivent retenter en respectant la capacite
@@ -47,7 +49,6 @@ public class Ascenseur {
 			} else {
 				return false;
 			}
-			System.out.println("Whhhhooo");
 			return true;
 		} else {
 			return false;
@@ -55,7 +56,9 @@ public class Ascenseur {
 	}
 
 	public boolean descendre(int etage, int nombre_personnes_etage) {
-		if (alimente && etage >= 0 && etage_courant > etage && porte_fermee) {
+		if(nombre_personnes_etage < 0) {
+			return false;
+		} else if (alimente && etage >= 0 && etage_courant > etage && porte_fermee) {
 			this.etage_courant = etage;
 			if (etage == 0) {
 				// tout le monde sort de l'ascenseur et l'ascenseur se libere pour la montee
