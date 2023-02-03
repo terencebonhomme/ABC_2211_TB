@@ -32,9 +32,10 @@ public class CommandeAvecBatterie extends Commande {
 
 	@Override
 	public boolean ouvrir() {
+		System.out.println("ouvrir commande batterie");
 		if ((super.getType() == "locale" || super.getType() == "distante") && super.getFonctionne()
 				&& super.getPorte().getPourcentOuverte() < 100 && this.batterieDedans != null
-				&& this.batterieDedans.getPourcentRestant() > 0) {
+				&& this.batterieDedans.getPourcentRestant() > 0 && !super.getPorte().getVerouillee()) {
 			this.getPorte().setPourcentOuverte(100);
 			if (super.getType() == "locale") {
 				System.out.println("ouverture depuis une commande locale");
@@ -49,9 +50,12 @@ public class CommandeAvecBatterie extends Commande {
 
 	@Override
 	public boolean ouvrir(double tempsPressionSecondes) {
-		if ((super.getType() == "locale" || super.getType() == "distante") && super.getFonctionne()
+		System.out.println("ouvrir commande batterie");
+		if(tempsPressionSecondes < 0) {
+			return false;
+		} else if ((super.getType() == "locale" || super.getType() == "distante") && super.getFonctionne()
 				&& this.getPorte().getPourcentOuverte() < 100 && this.batterieDedans != null
-				&& this.batterieDedans.getPourcentRestant() > 0) {
+				&& this.batterieDedans.getPourcentRestant() > 0 && !super.getPorte().getVerouillee()) {
 			if (tempsPressionSecondes / this.getPorte().getTempsOuverture() * 100
 					+ this.getPorte().getPourcentOuverte() <= 100) {
 				this.getPorte().setPourcentOuverte(this.getPorte().getPourcentOuverte()
@@ -72,9 +76,10 @@ public class CommandeAvecBatterie extends Commande {
 
 	@Override
 	public boolean fermer() {
+		System.out.println("fermer commande batterie");
 		if ((super.getType() == "locale" || super.getType() == "distante") && super.getFonctionne()
 				&& this.getPorte().getPourcentOuverte() > 0 && this.batterieDedans != null
-				&& this.batterieDedans.getPourcentRestant() > 0) {
+				&& this.batterieDedans.getPourcentRestant() > 0 && !super.getPorte().getVerouillee()) {
 			this.getPorte().setPourcentOuverte(0);
 			if (super.getType() == "locale") {
 				System.out.println("fermeture depuis une commande locale");
@@ -89,8 +94,11 @@ public class CommandeAvecBatterie extends Commande {
 
 	@Override
 	public boolean fermer(double tempsPressionSecondes) {
-		if ((super.getType() == "locale" || super.getType() == "distante") && super.getFonctionne()
-				&& this.getPorte().getPourcentOuverte() > 0) {
+		System.out.println("fermer commande batterie");
+		if(tempsPressionSecondes < 0) {
+			return false;
+		} else if ((super.getType() == "locale" || super.getType() == "distante") && super.getFonctionne()
+				&& this.getPorte().getPourcentOuverte() > 0 && !super.getPorte().getVerouillee()) {
 			if (tempsPressionSecondes / this.getPorte().getTempsOuverture() * 100 <= this.getPorte()
 					.getPourcentOuverte() && this.batterieDedans != null && this.batterieDedans.getPourcentRestant() > 0) {
 				this.getPorte().setPourcentOuverte(this.getPorte().getPourcentOuverte()

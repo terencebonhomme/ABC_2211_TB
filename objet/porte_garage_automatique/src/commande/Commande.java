@@ -42,8 +42,9 @@ public abstract class Commande {
 
 	// tout par défaut
 	public boolean ouvrir() {
+		System.out.println("ouvrir commande");
 		if ((this.type == "locale" || this.type == "distante") && this.fonctionne
-				&& this.getPorte().getPourcentOuverte() < 100) {
+				&& this.getPorte().getPourcentOuverte() < 100 && !this.getPorte().getVerouillee()) {
 			this.getPorte().setPourcentOuverte(100);
 			if (this.type == "locale") {
 				System.out.println("ouverture depuis une commande locale");
@@ -57,8 +58,11 @@ public abstract class Commande {
 	}
 
 	public boolean ouvrir(double tempsPressionSecondes) {
-		if ((this.type == "locale" || this.type == "distante") && this.fonctionne
-				&& this.getPorte().getPourcentOuverte() < 100) {
+		System.out.println("ouvrir commande");
+		if(tempsPressionSecondes < 0) {
+			return false;
+		} else if ((this.type == "locale" || this.type == "distante") && this.fonctionne
+				&& this.getPorte().getPourcentOuverte() < 100 && !this.getPorte().getVerouillee()) {
 			if (tempsPressionSecondes / this.getPorte().getTempsOuverture() * 100
 					+ this.getPorte().getPourcentOuverte() <= 100) {
 				this.getPorte().setPourcentOuverte(this.getPorte().getPourcentOuverte()
@@ -79,8 +83,9 @@ public abstract class Commande {
 
 	// tout par défaut
 	public boolean fermer() {
+		System.out.println("fermer commande");
 		if ((this.type == "locale" || this.type == "distante") && this.fonctionne
-				&& this.getPorte().getPourcentOuverte() > 0) {
+				&& this.getPorte().getPourcentOuverte() > 0 && !this.getPorte().getVerouillee()) {
 			this.getPorte().setPourcentOuverte(0);
 			if (this.type == "locale") {
 				System.out.println("fermeture depuis une commande locale");
@@ -94,8 +99,11 @@ public abstract class Commande {
 	}
 
 	public boolean fermer(double tempsPressionSecondes) {
-		if ((this.type == "locale" || this.type == "distante") && this.fonctionne
-				&& this.getPorte().getPourcentOuverte() > 0) {
+		System.out.println("fermer commande");
+		if(tempsPressionSecondes < 0) {
+			return false;
+		} else if ((this.type == "locale" || this.type == "distante") && this.fonctionne
+				&& this.getPorte().getPourcentOuverte() > 0 && !this.getPorte().getVerouillee()) {
 			if (tempsPressionSecondes / this.getPorte().getTempsOuverture() * 100 <= this.getPorte()
 					.getPourcentOuverte()) {
 				this.getPorte().setPourcentOuverte(this.getPorte().getPourcentOuverte()

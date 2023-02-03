@@ -16,7 +16,7 @@ public class PorteGarageAutomatique extends PorteGarage {
 	// constructeurs
 
 	public PorteGarageAutomatique() {
-		super("sans nom", "battante", "PVC", 0.0);
+		super("sans nom", "battante", "PVC", 0.0, false);
 		Batterie batterie = new Batterie();
 		this.typeMoteur = "moteur a cremaillere";
 		this.commandes = new Commande[] { new CommandeSansBatterie("locale", true, this),
@@ -26,8 +26,8 @@ public class PorteGarageAutomatique extends PorteGarage {
 	}
 
 	public PorteGarageAutomatique(String _nom, String _typeMoteur, String _typePorte, String _materiel,
-			double _pourcentOuverte, double _tempsOuverture) {
-		super(_nom, _typePorte, _materiel, _tempsOuverture);
+			double _pourcentOuverte, double _tempsOuverture, boolean _verouillee) {
+		super(_nom, _typePorte, _materiel, _tempsOuverture, _verouillee);
 		this.typeMoteur = _typeMoteur;
 		this.pourcentOuverte = _pourcentOuverte;
 		this.tempsOuverture = _tempsOuverture;
@@ -35,28 +35,12 @@ public class PorteGarageAutomatique extends PorteGarage {
 
 	// getters
 
-	public String getNom() {
-		return nom;
-	}
-
 	public String getTypeMoteur() {
 		return typeMoteur;
 	}
 
-	public String getTypePorte() {
-		return typePorte;
-	}
-
-	public String getMateriel() {
-		return materiel;
-	}
-
 	public Commande[] getCommandes() {
 		return commandes;
-	}
-
-	public double getPourcentOuverte() {
-		return pourcentOuverte;
 	}
 
 	public double getTempsOuverture() {
@@ -73,7 +57,7 @@ public class PorteGarageAutomatique extends PorteGarage {
 		this.pourcentOuverte = pourcentage;
 	}
 
-	// methode
+	// methodes
 
 	public void ajouterCommande(Commande commande) {
 		Commande[] liste_commande = new Commande[this.commandes.length + 1];
@@ -99,7 +83,7 @@ public class PorteGarageAutomatique extends PorteGarage {
 		}
 
 		return "nom = " + this.nom + "\ntypeMoteur = " + this.typeMoteur + "\ntypePorte = " + this.typePorte
-				+ "\nmateriel = " + this.materiel + "\npourcentOuverte = " + this.pourcentOuverte + commandes;
+				+ "\nmateriel = " + this.materiel + "\npourcentOuverte = " + this.pourcentOuverte + "\nverouillee = " + this.verouillee + commandes;
 	}
 
 }
