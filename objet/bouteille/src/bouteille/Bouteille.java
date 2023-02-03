@@ -33,8 +33,10 @@ public class Bouteille {
 
 	public boolean remplir(double quantiteLitre) {
 		System.out.println("on veut remplir la bouteille " + this.nom + " remplie a " + this.contenanceLitre + " L sur " + this.CAPACITE_LITRE + " L de " + quantiteLitre + " L");
-		
-		if(this.estOuverte) {
+		if(quantiteLitre < 0) {
+			System.out.println("\tla quantite doit être positive");
+			return false;
+		}else if(this.estOuverte) {
 			if (this.contenanceLitre + quantiteLitre <= this.CAPACITE_LITRE) {
 				System.out.println("\ton remplit la bouteille de " + quantiteLitre + " L");
 				this.contenanceLitre += quantiteLitre;
@@ -70,7 +72,10 @@ public class Bouteille {
 	public boolean vider(double quantiteLitre) {
 		System.out.println("on veut vider la bouteille " + this.nom + " remplie a " + this.contenanceLitre + " L sur " + this.CAPACITE_LITRE + " L de " + quantiteLitre + " L");
 		
-		if(this.estOuverte) {
+		if(quantiteLitre < 0) {
+			System.out.println("\tla quantite doit être positive");
+			return false;
+		} else if(this.estOuverte) {
 			if(this.contenanceLitre >= quantiteLitre) {
 				System.out.println("\ton vide la bouteille de " + quantiteLitre + " L");
 				this.contenanceLitre -= quantiteLitre;
